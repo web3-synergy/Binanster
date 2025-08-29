@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+.intro{
+    text-align: center;
+}
+.intro h1{
+    
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 97.9px;
+    letter-spacing: 0.04em;
+    text-align: center;
+}
+.intro p{
+    width: 80%;
+    margin: auto;
+    font-family: var(--font-lexend);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27.5px;
+    text-align: center;
+}
+
+.wrapper {
+    position: relative;
+    
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: absolute;
+    top: 0;
+    width: 280px;
+    height: 390px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.middle {
+    z-index: 2;
+}
+
+.left {
+    transform: rotate(-2deg);
+}
+
+.right {
+    transform: rotate(2deg);
+}
+
+/* Animation when card comes into view */
+.inView.middle {
+    transform: none;
+}
+
+.inView.left {
+    transform: translate(-105%, 9%) rotate(-12deg);
+    opacity: 1;
+}
+
+.inView.right {
+    transform: translate(105%, 9%) rotate(12deg);
+    opacity: 1;
+}
+
+
+
+.cardC {
+    background: #1B1E33;
+    padding: 10px;
+    position: relative;
+}
+
+.stepNumber {
+    position: absolute;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 42px;
+    z-index: 1000;
+    text-align: left;
+    padding: 10px 15px;
+    margin: 0;
+    left: 0;
+    top: 0;
+    color: #fff;
+}
+
+.description {
+    font-family: 'Lexend', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    padding: 10px 5px;
+    line-height: 16.5px;
+    text-align: left;
+}
+
+.triangle {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 80px 90px 0 0;
+    border-color: #1B1E33 transparent transparent transparent;
+    position: absolute;
+    z-index: 900;
+    top: 0;
+    left: 0;
+}
+
+.imageHolder {
+    background: #494B5C;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    position: relative;
+}
+
+.stepTitle {
+    position: absolute;
+    bottom: 0;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 39.69px;
+    text-align: left;
+    padding: 10px 8px;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+    color: #FFFFFF33;
+    margin: 50px auto;
+}
+
+.cardC.inView {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.4s;
+}
+
+.stepNumber, .stepTitle, .description {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.inView .stepNumber, .inView .stepTitle, .inView .description {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+}
+.stepper{
+    border-radius: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: auto 1px;
+    padding: 15px;
+    background-color: var(--secondary-color);
+
+
+}
+.iconStep{
+    width: 24px;
+    height: 24px;
+    
+
+}
+.stepper.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+@media screen and (max-width: 768px) {
+    .intro h1 {
+        font-size: 30px;
+    }
+    .intro p {
+        width: 100%;
+        font-size: 15px;
+    }
+    .stepNumber {
+        font-size: 18px;
+        line-height: 23px;
+        padding: 10px 15px;
+
+    }
+    .triangle {
+         border-width: 50px 60px 0 0;
+    }
+    .image {
+        width: 150px;
+        height: 150px;
+        color: #FFFFFF33;
+        margin: 10px auto;
+    }
+    .card {
+        width: 200px;
+             height: 280px;
+    }
+    .stepTitle {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 25.69px;
+        text-align: left;
+        padding: 0px 8px;
+   
+    }
+    .wrapper {
+
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .intro h1 {
+        font-size: 28px;
+        line-height: 62px;
+    }
+    .intro p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .left {
+        transform: rotate(0);
+    }
+
+    .right {
+        transform: rotate(0);
+    }
+
+    .inView.left {
+        transform: translate(0, 0%) rotate(0deg);
+        z-index: 1;
+    }
+
+    .inView.right {
+        transform: translate(0, 0%) rotate(0deg);
+        z-index: 2;
+    }
+    .inView.middle {
+        transform: translate(0, 0%) rotate(0deg);
+        z-index: 3;
+    }
+
+    .itemLeave{
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+        transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+    .card {
+        position: relative;
+        width: 250px;
+        
+    }
+    .wrapper {
+        column-gap: 10px;
+        flex:nowrap;
+        max-width: 90vw;
+        justify-content: start;
+        align-items: stretch;
+        height: 350px;
+    }
+    .stepNumber {
+        font-size: 22px;
+        line-height: 22px;
+        padding: 10px 9px;
+
+    }
+    .triangle {
+         border-width: 60px 60px 0 0;
+    }
+    .image {
+        width: 200px;
+        height: 180px;
+        color: #FFFFFF33;
+        margin: 20px auto;
+    }
+
+    .stepTitle {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 25.69px;
+        text-align: left;
+        padding: 0px 8px;
+   
+    }
+    /* Card exiting */
+    .exitActive {
+        transform: scale3d(0.3, 0.3, 0.3);
+        /* opacity: 0; */
+
+    }
+
+}

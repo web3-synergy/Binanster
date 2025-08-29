@@ -22,7 +22,7 @@ const featureTabs = [
         desc: "A whitepaper about absolutely Nothing — and everything that matters. No hype, no promises, no roadmap to the moon. Just a simple vision: hold, chill, and learn. This is our manifesto — not a pitch deck.",
 
         icon: <Git className={styles.icon} />,
-        img: "/assets/img/landingPage/paper.png",
+        img: "/assets/img/landingPage/paper.PNG",
     },
     {
         id: 2,
@@ -58,7 +58,7 @@ const featureTabs = [
         desc: "Chill. Click less. Win more. Most losses come from doing too much. With Nothing, you hold and breathe. Less stress. More clarity.",
 
         icon: <Overtrading className={styles.icon} />,
-        img: "/assets/img/landingPage/paper.png",
+        img: "/assets/img/landingPage/paper.PNG",
     },
     {
         id: 6,
@@ -67,7 +67,7 @@ const featureTabs = [
         desc: "Let your portfolio teach you. Real growth comes from experience. Holding through the chaos is the lesson — and the reward.",
 
         icon: <MdiRecycle className={styles.icon} />,
-        img: "/assets/img/landingPage/paper.png",
+        img: "/assets/img/landingPage/paper.PNG",
     },
     {
         id: 7,
@@ -75,7 +75,7 @@ const featureTabs = [
         label: "Feature Four",
         desc: "Memes are marketing. Hype is a skill. Community is the engine. Every meme, tweet, and post spreads the message. Bull posting isn’t just noise — it’s how we build culture, attract attention, and make Nothing something worth watching.",
         icon: <Post className={styles.icon} />,
-        img: "/assets/img/landingPage/paper.png",
+        img: "/assets/img/landingPage/paper.PNG",
     },
 ];
 

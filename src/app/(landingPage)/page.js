@@ -8,7 +8,7 @@ import HeroSection from "@/Components/LandingPage/HeroSection";
 
 import Sun from "@/Components/LandingPage/Sun";
 import Navbar from "@/Components/LandingPage/Navabr";
-import StrategySection from "@/Components/LandingPage/CommunityIncentives";
+import Cards from "@/Components/LandingPage/Cards";
 
 
 export default function Home() {
@@ -76,14 +76,11 @@ export default function Home() {
           <Feature />
         </div>
 
-        {/* <div className="space-bw-sections">
+         <div className="space-bw-sections">
           <Cards />
-        </div> */}
+        </div> 
 
-        {/* <JoinUs /> */}
-        <div className="space-bw-sections">
-          <StrategySection />
-        </div>
+        
 
         <div className="space-bw-sections">
           <Footer />
