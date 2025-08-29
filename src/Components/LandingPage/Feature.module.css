@@ -1,0 +1,189 @@
+
+.main{
+    border: 1px solid #3D447E;
+    background: #FFFFFF0A;
+    border-radius: 10px;
+    z-index: 99;
+}
+.details{
+    row-gap: 0.6rem;
+}
+.details h1{
+    font-family: inherit;
+    font-size: 28px;
+    font-weight: 900;
+    text-align: left;
+    color: #FFFFFF;
+    white-space: nowrap;
+    padding-bottom: 10px;
+
+}
+.details p{
+    color: #FFFFFF;
+    font-family: var(--font-lexend) ;
+    font-size: 16;
+    font-weight: 300;
+    line-height: 20px;
+    text-align: left;
+    min-height: 40px;
+}
+.sidebar{
+    column-gap: 20px;
+}
+.btns{
+    width: 290px;
+}
+.icon{
+     width: 24px; height: 24px;
+}
+.btns button{
+    
+    border: none;
+    cursor: pointer;
+    color:#fff ;
+    border-radius: 0px 0px 4px 4px;
+    border-bottom: 1px solid #3D447E;
+    padding: 16px 16px 16px 16px;
+    background: transparent;
+    width: 100%;
+    font-family: var(--font-lexend);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-align: left;
+    column-gap: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.btns button.active {
+    background: #FFFFFF0F;
+    border-bottom: 3px solid #3DC36F;
+}
+
+.btns button:hover {
+    background: #FFFFFF0A;
+}
+.contract-address {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .address-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .copy-icon {
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  
+  
+  
+@media screen and (max-width: 992px) {
+
+    .details p{
+        font-size: 14px;
+    }
+    .details h1{
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .btns{
+
+        overflow: hidden;
+        width: 100%;
+        column-gap: 10px;
+        flex-wrap: nowrap;
+
+    }
+    .btns span{
+        display: none;
+    }
+
+    .btns button{
+        column-gap: 5px;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 4px;
+
+    }
+    .sidebar{
+        row-gap: 10px;
+    }
+     .details h1{
+          padding-bottom: 3px;
+     }
+}
+
+@media screen and (max-width: 568px) {
+    .icon{
+     width: 21px; height: 21px;
+    }
+    .details h1{
+        font-size: 22px;
+         margin-bottom: 10px;
+            padding-bottom: 0px;
+    }
+    .btns{
+        column-gap: 8px;
+                width: 100%;
+        padding: 0;
+        margin-top: 32px
+
+    }
+
+    .btns button{
+        width: 100%;
+        padding: 12px 14px;
+    }
+    .details p{
+        height: 80px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .main{
+        max-width: 524px;
+    }
+    .icon{
+     width: 20px; height: 20px;
+    }
+    .btns{
+      column-gap: 5px;
+      overflow: hidden;
+      border:1px solid red;
+        
+    }
+    .img{
+      min-height: 210px;  
+        border:1px solid red;
+    }
+
+
+    .btns button{
+          width: 40px;
+        height: 40px;
+        padding: 10px 10px;
+    }
+    .details p{
+        height: 80px;
+        margin-bottom: 10px;
+          border:1px solid red;
+    }
+}
+@media screen and (max-width: 410px) {
+    .btns{
+      column-gap: 1px;
+
+        
+    }
+
+}
+

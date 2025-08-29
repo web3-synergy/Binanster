@@ -1,0 +1,148 @@
+/* Global body adjustments */
+body {
+  font-family: var(--font-main);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--color-main);
+  background-color: var(--landing-background);
+  margin: 0;
+  padding: 0;
+}
+
+/* Intro Section */
+.Cards_intro__ubVy0 {
+  text-align: center; /* centers all text inside */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ensures vertical alignment if needed */
+  justify-content: center; /* optional, if you want vertical centering in a larger container */
+  gap: 0.5rem; /* space between heading and paragraph */
+}
+
+.Cards_intro__ubVy0 h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-main);
+  margin: 0; /* remove bottom margin since gap handles spacing */
+}
+
+.Cards_intro__ubVy0 p {
+  font-size: 1rem;
+  color: var(--shade-of-white); /* corrected color variable */
+  line-height: 1.6;
+  margin: 0; /* remove default paragraph margin */
+}
+
+/* Cards Wrapper */
+.Cards_wrapper__uEP2O {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+/* Individual Card */
+.Cards_card__imtDZ {
+  background-color: var(--background-dark);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  flex: 1 1 30%;
+  min-width: 250px;
+  box-shadow: var(--bs-box-shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Cards_card__imtDZ:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--bs-box-shadow-lg);
+}
+
+/* Step number */
+.Cards_stepNumber__KhF3s {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+/* Step title */
+.Cards_stepTitle__s2SUu {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+/* Card description */
+.Cards_description__AgzsK {
+  font-size: 0.95rem;
+  color: var(--shade-of-blue);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.Cards_imageHolder__tILQH {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically if needed */
+  flex-direction: column;  /* keeps title above icon if stacked */
+  gap: 0.5rem;             /* optional spacing between title and icon */
+}
+
+.Cards_image__3dxp6 {
+  font-size: 3rem;
+  color: white;
+  margin: 0; /* remove any left margin */
+  text-align: center; /* optional for inline alignment */
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+  .Cards_wrapper__uEP2O {
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .Cards_card__imtDZ {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .Cards_intro__ubVy0 h1 {
+    font-size: 1.5rem;
+  }
+
+  .Cards_intro__ubVy0 p {
+    font-size: 0.9rem;
+  }
+
+  .Cards_stepTitle__s2SUu {
+    font-size: 1rem;
+  }
+
+  .Cards_stepNumber__KhF3s {
+    font-size: 1.25rem;
+  }
+}
+
+/* Mobile Stepper */
+/* Mobile Cards Row */
+@media screen and (max-width: 768px) {
+  .Cards_wrapper__uEP2O {
+    display: flex;          /* make flex container */
+    flex-direction: row;    /* row layout */
+    overflow-x: auto;       /* allow horizontal scroll */
+    scroll-behavior: smooth;
+    gap: 1rem;              /* space between cards */
+  }
+
+  .Cards_card__imtDZ {
+    min-width: 250px;       /* card width for mobile */
+    flex-shrink: 0;         /* prevent shrinking */
+  }
+}

@@ -1,0 +1,136 @@
+
+
+.meteoro {
+  position: absolute;
+  background-color: #fff;
+  width: 2px;
+  z-index: 1;
+  height: 2px;
+  border-radius: 50%;
+  transform: rotate(-35deg);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+
+}
+.meteoro2 {
+  position: absolute;
+  background-color: #ff7225;
+  width: 2px;
+  z-index: 1;
+  height: 2px;
+  border-radius: 50%;
+  transform: rotate(-35deg);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 7s;
+
+}
+
+
+.meteoro.style1 { animation-name: meteoroStyle1; }
+.meteoro.style2 { animation-name: meteoroStyle2; }
+.meteoro.style3 { animation-name: meteoroStyle3; }
+.meteoro.style4 { animation-name: meteoroStyle4; }
+.meteoro.style5 { animation-name: meteoroStyle3; }
+.meteoro.style6 { animation-name: meteoroStyle4; }
+
+
+@keyframes meteoroStyle1 {
+  0% { opacity: 0; right: 300px; top: 100px; }
+  30% { opacity: .3; }
+  60% { opacity: .3; }
+  100% { opacity: 0; right: 1000px; top: 600px; }
+}
+
+@keyframes meteoroStyle2 {
+  0% { opacity: 0; right: 700px; top: 100px; }
+  30% { opacity: .3; }
+  60% { opacity: .3; }
+  100% { opacity: 0; right: 1400px; top: 600px; }
+}
+
+@keyframes meteoroStyle3 {
+  0% { opacity: 0; right: 300px; top: 300px; }
+  30% { opacity: .3; }
+  60% { opacity: .3; }
+  100% { opacity: 0; right: 1400px; top: 800px; }
+}
+
+@keyframes meteoroStyle4 {
+  0% { opacity: 0; right: 700px; top: 300px; }
+  30% { opacity: .3; }
+  60% { opacity: .3; }
+  100% { opacity: 0; right: 1400px; top: 800px; }
+}
+
+
+
+.meteoro2:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 1px;
+  height: 0;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-left: 85px solid #ff7225;
+  position: absolute;
+  left: 2px;
+  top: 0;
+}
+
+.meteoro:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 1px;
+  height: 0;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-left: 85px solid white;
+  position: absolute;
+  left: 2px;
+  top: 0;
+}
+
+.meteoro2.style1 { animation-name: meteoro2Style1; }
+.meteoro2.style2 { animation-name: meteoro2Style2; }
+.meteoro2.style3 { animation-name: meteoro2Style3; }
+.meteoro2.style4 { animation-name: meteoro2Style4; }
+.meteoro2.style5 { animation-name: meteoro2Style5; }
+.meteoro2.style6 { animation-name: meteoro2Style4; }
+
+@keyframes meteoro2Style1 {
+  0% { opacity: 0; right: 700px; top: 100px; }
+  30% { opacity: .1; }
+  60% { opacity: .1; }
+  100% { opacity: 0; right: 1400px; top: 600px; }
+}
+@keyframes meteoro2Style2 {
+  0% { opacity: 0; right: 200px; top: -100px; }
+  30% { opacity: .1; }
+  60% { opacity: .1; }
+  100% { opacity: 0; right: 1400px; top: 600px; }
+}
+@keyframes meteoro2Style3 {
+  0% { opacity: 0; right: 100px; top: -100px; }
+  30% { opacity: .1; }
+  60% { opacity: .1; }
+  100% { opacity: 0; right: 1400px; top: -600px; }
+}
+@keyframes meteoro2Style4 {
+  0% { opacity: 0; right: 200px; top: -200px; }
+  30% { opacity: .1; }
+  60% { opacity: .1; }
+  100% { opacity: 0; right: 1000px; top: -300px; }
+}
+
+@keyframes meteoro2Style5 {
+  0% { opacity: 0; right: 500px; top: 80px; }
+  30% { opacity: .1; }
+  60% { opacity: .1; }
+  100% { opacity: 0; right: 1000px; top: 500; }
+}

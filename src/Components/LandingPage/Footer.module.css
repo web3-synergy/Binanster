@@ -1,0 +1,137 @@
+
+.CopyRight{
+    border-top: 1px solid #FFFFFF;
+    margin-bottom: 30px;
+}
+.icons{
+    column-gap: 20px;
+}
+
+.icon{
+    width:22px;
+    height: 22px;
+   
+}
+.CopyRight p{
+    font-family: var(--font-lexend) ;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+
+}
+
+
+.btn{
+  border: none;
+  background: var(--shade-of-blue);
+  padding: 6px 16px;
+  border-radius: 2.5rem;
+  color: #0F1525;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--font-lexend) ;
+  text-align: center;
+}
+.btn:hover{
+    transition: 0.3s;
+   background: darken(#dedadaff,10%);
+}
+.btn:hover span {
+    transition: 0.3s;
+  display: none
+}
+
+.btn:hover:before {
+    transition: 0.3s;
+  content: "Coming Soon";
+  
+}
+.footerLinks{
+    row-gap: 15px;
+}
+.footerLinks h1{
+    color: #FFFFFF;
+
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: left;
+}
+.footerLinks p{
+    font-family: var(--font-lexend) ;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+
+}
+.contract-address{
+    background: rgba(255, 255, 255, 0.10);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding: 12px 16px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+    margin-bottom: 20px;
+}
+.contract-address h1{
+    color: #FFF;
+    white-space: nowrap;
+    font-family: var(--font-lexend) ;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 111.111% */
+}
+.contract-address input{
+    all: unset;
+    width: 100%;
+
+    color: #FFF;
+    text-align: right;
+    font-family: var(--font-lexend) ;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 111.111% */
+}
+
+@media screen and (max-width: 992px) {
+    .btn{
+        width: 170px;
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contract-address h1 {
+        font-size: 14px;
+    }
+
+    .contract-address {
+        padding: 8px;
+    }
+
+    .contract-address input {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .CopyRight p {
+        font-size: 12px;
+    }
+
+    .contract-address {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: start;
+    }
+
+    .address {
+        font-size: 12px;
+    }
+}

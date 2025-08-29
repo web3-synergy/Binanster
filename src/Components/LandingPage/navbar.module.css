@@ -1,0 +1,142 @@
+
+.icons{
+    column-gap: 20px;
+    row-gap: 18px;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+
+}
+.icon{
+    width:25px;
+    height: 25px;
+   
+}
+.navbar-brand {
+  order: 2; /* Center the logo by reordering flex items */
+}
+.navbar-toggler {
+  order: 1;
+  border: none;
+  background-color: transparent;
+}
+
+.offcanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100%; /* Only 50px high */
+  background-color: rgba(30, 34, 45, 0.7); /* Adjust opacity to fit the blur effect */
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(4px);
+  transform: translateX(-100%); /* Initially hidden above the viewport */
+  transition: transform 0.3s ease-in-out;
+  z-index: 1050;
+  padding: 2.5rem 0.8rem 0.5rem; /* Adjust padding as needed */
+  display: flex;
+  justify-content: flex-start;
+
+}
+.navbarToggler{
+    border: none ;
+    padding-left: 0;
+    color: #fff;
+    background-color: transparent;
+}
+.navbarToggler:focus{
+    border: none;
+    outline: none;
+}
+.offcanvas.show {
+  transform: translateX(0);
+}
+
+
+
+
+
+.offcanvasBody {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Backdrop style */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1040;
+}
+.btn{
+  border: none;
+  background: var(--shade-of-blue);
+  padding: 6px 16px;
+  border-radius: 2.5rem;
+  color: #0F1525;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--font-lexend) ;
+  text-align: center;
+  transition: 0.3s;
+}
+.btn:hover{
+    transition: 0.3s;
+   background: darken(#dedadaff,7%);
+}
+.btn:hover span {
+    transition: 0.3s;
+  display: none
+}
+
+.btn:hover:before {
+    transition: 0.3s;
+  content: "Coming Soon";
+  
+}
+
+
+@media screen and (min-width: 768px) {
+ .navbar-brand {
+    order: 1; /* Logo on the left */
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .navbarToggler {
+    display: none; /* Hide the toggle button */
+  }
+
+  .icons {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    row-gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    size: 24px;
+
+  }
+
+  .navbar-nav {
+    order: 2; /* Center the menu items */
+   
+   
+  }
+
+.icon{
+    width:22px;
+    height: 22px;
+   
+}
+
+
+  .offcanvas {
+    display: none; /* Hide off-canvas menu on desktop */
+  }
+
+}

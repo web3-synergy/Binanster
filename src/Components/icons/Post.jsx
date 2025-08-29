@@ -1,0 +1,48 @@
+import React from 'react';
+
+export function Post(props) {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <mask
+        id="mask0_4007_13537"
+        style={{ maskType: 'luminance' }}
+        maskUnits="userSpaceOnUse"
+        x="2"
+        y="2"
+        width="20"
+        height="20"
+      >
+        <path
+          d="M21 19.5V4.5C21 4.10218 20.842 3.72064 20.5607 3.43934C20.2794 3.15804 19.8978 3 19.5 3H4.5C4.10218 3 3.72064 3.15804 3.43934 3.43934C3.15804 3.72064 3 4.10218 3 4.5V19.5C3 19.8978 3.15804 20.2794 3.43934 20.5607C3.72064 20.842 4.10218 21 4.5 21H19.5C19.8978 21 20.2794 20.842 20.5607 20.5607C20.842 20.2794 21 19.8978 21 19.5Z"
+          fill="white"
+          stroke="white"
+          strokeWidth="2"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M12.0002 9.15771L10.5522 12.1127L7.26318 12.5897L9.64568 14.9187L9.07618 18.1577L12.0002 16.5992L14.9247 18.1577L14.3597 14.9187L16.7377 12.5897L13.4672 12.1127L12.0002 9.15771Z"
+          fill="black"
+          stroke="black"
+          strokeWidth="2"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M9.1582 6.31592H14.8422"
+          stroke="black"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </mask>
+      <g mask="url(#mask0_4007_13537)">
+        <path d="M0 0H24V24H0V0Z" fill="white" />
+      </g>
+    </svg>
+  );
+}

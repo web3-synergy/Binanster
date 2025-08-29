@@ -1,0 +1,18 @@
+
+.sun-design {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(170.74deg, #80D1FC 19.43%, #ECCC30 87.37%);
+    border-radius: 50%;
+    position: fixed;
+    top: 20%;
+    right: 7%;
+    transform: translateY(-50%);
+    box-shadow: 0px 4px 50px 15px #FFB17880;
+    z-index: 1000; /* Ensure it's on top */
+    animation-name: lua;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    will-change: transform, box-shadow;
+}
