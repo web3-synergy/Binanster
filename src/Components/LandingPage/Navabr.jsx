@@ -28,10 +28,10 @@ const Navbar = () => {
     
     const mainMenu = (
         <div className={`d-flex flex-column flex-md-row  ${styles.icons}`}>
-           <a href="https://dexscreener.com/solana/guxautvxh2cvv2avgkby8cfcsn9v2uiwr8vccqpn9hiu" target="_blank" rel="noopener noreferrer">
+           <a href="/" target="_blank" rel="noopener noreferrer">
   <Image src={Dexscreener} alt="Dexscreener" width={24} height={24} className={styles.icon} />
 </a>
-            <Link href='https://www.dextools.io/app/en/solana/pair-explorer/GUXAutvXh2Cvv2avGkbY8CfcsN9v2Uiwr8VCCqpn9HiU?t=1756380852203' target="_blank"><DextoolsSeeklogo className={`${styles.icon} `} /></Link>
+            <Link href='/' target="_blank"><DextoolsSeeklogo className={`${styles.icon} `} /></Link>
             <Link href='https://t.me/+bvDiSc1DWPo5MjFh' target="_blank"><BxBxlTelegram className={`${styles.icon}`} /></Link>
             <Link href='https://x.com/nothingofsolana?s=21' target="_blank"><AkarIconsXFill className={styles.icon} /></Link>
         </div>

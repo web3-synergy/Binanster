@@ -71,7 +71,7 @@ export default function HeroSection() {
                 
                 <h1 className="display-4">Welcome to Nothing Coin</h1> <br />
                 <p >The ultimate meme coin strategy for long-term holding. Hodl, do not trade & Bullpost</p>
-                <a href="https://raydium.io/swap/?inputMint=3Sf6oKCeEqCuco4aYtKHHDTBYLAWHiL47QjvkW1UYDEG&outputMint=4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R" className={styles.heroLink}>
+                <a href="/" className={styles.heroLink}>
                   <button className={`btn ${styles.heroButton}`}>
                     <span>Buy Nothing</span>
                   </button>

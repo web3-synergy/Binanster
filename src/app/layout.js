@@ -6,8 +6,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 
 export const metadata = {
-  title: "Nebula ",
-  description: "Nebula",
+  title: "JustdoNothing ",
+  description: "justdoNothing",
 };
 
 const red_hat_display = Red_Hat_Display({

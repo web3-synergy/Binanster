@@ -15,13 +15,13 @@ import { Button, message } from 'antd';
 const aboutus  = [
     { label: 'Twitter', link: 'https://x.com/nothingofsolana?s=21' },
     { label: 'Telegram Group', link: 'https://t.me/+bvDiSc1DWPo5MjFh' },
-    {label: 'Coingecko', link: 'https://www.coingecko.com/en/coins/all-you-had-to-do-was'},
+    {label: 'Coingecko', link: '/'},
 ]
-
+3
 
 const chart = [
-    { label: 'Pump fun', link: 'https://pump.fun/3Sf6oKCeEqCuco4aYtKHHDTBYLAWHiL47QjvkW1UYDEG' },
-    { label: 'Dexscreener', link: 'https://dexscreener.com/solana/guxautvxh2cvv2avgkby8cfcsn9v2uiwr8vccqpn9hiu' },
+    { label: 'Pip fun', link: '/' },
+    { label: 'Dexscreener', link: '/' },
     
 ];
 
@@ -41,13 +41,7 @@ export default function Footer() {
         >
 
         
-        <div style={{ width: "100%", height: "500px", position: "relative" }}>
-         <iframe
-           src="https://dexscreener.com/solana/GUXAutvXh2Cvv2avGkbY8CfcsN9v2Uiwr8VCCqpn9HiU?embed=1&loadChartSettings=0&trades=0&tabs=0&info=0&chartLeftToolbar=0&chartDefaultOnMobile=1&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
-           style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", border: 0 }}
-           allowFullScreen
-         />
-        </div>
+        
             
             <main className='row mt-5 mb-3 pb-5'>
                 
@@ -121,7 +115,7 @@ function MadeBy() {
 }
 function ContractAddress() {
     const [messageApi, contextHolder] = message.useMessage();
-    const address = '3Sf6oKCeEqCuco4aYtKHHDTBYLAWHiL47QjvkW1UYDEG'; // The address you want to copy
+    const address = 'coming soon'; // The address you want to copy
 
     const handleCopy = () => {
         navigator.clipboard.writeText(address)
@@ -167,10 +161,10 @@ function CopyRight() {
         >
             <p>2025 Nothing. All rights reserved</p>
             <div className={`d-flex align-items-center justify-content-end  ${styles.icons}`}>
-            <a href="https://dexscreener.com/solana/guxautvxh2cvv2avgkby8cfcsn9v2uiwr8vccqpn9hiu" target="_blank" rel="noopener noreferrer">
+            <a href="/" target="_blank" rel="noopener noreferrer">
   <Image src={Dexscreener} alt="Dexscreener" width={24} height={24} className={styles.icon} />
 </a>
-                <Link href="https://www.dextools.io/app/en/solana/pair-explorer/GUXAutvXh2Cvv2avGkbY8CfcsN9v2Uiwr8VCCqpn9HiU?t=1756380852203" target="_blank"><DextoolsSeeklogo className={`${styles.icon} `} /></Link>
+                <Link href="/" target="_blank"><DextoolsSeeklogo className={`${styles.icon} `} /></Link>
                 <Link href="https://t.me/+bvDiSc1DWPo5MjFh" target="_blank"><BxBxlTelegram className={`${styles.icon}`} /></Link>
                 <Link href='https://x.com/nothingofsolana?s=21' target="_blank" ><AkarIconsXFill className={styles.icon} /></Link>
 
