@@ -1,25 +1,28 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
+import Particle from "@/Components/LandingPage/ParticlesBackground";
 
-import Meteor from "@/Components/LandingPage/Meteor";
-
-
-
- 
+// Example in React / Next.js layout component
 export default function RootLayout({ children }) {
   return (
-    <div className=''>
-      <div className="main"></div>
-
-      <div class="star-field">
-        <div class="layer"></div>
-        <div class="layer"></div>
-        <div class="layer"></div>
+    <div>
+      <div class="particles">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+  
       </div>
+      <Particle />
 
-      <Meteor/>
-
-      {children}
+      {/* Existing site content */}
+      <div>{children}</div>
     </div>
   );
 }

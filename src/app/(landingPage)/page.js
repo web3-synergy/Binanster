@@ -6,8 +6,8 @@ import Feature from "@/Components/LandingPage/Feature";
 import Footer from "@/Components/LandingPage/Footer";
 import HeroSection from "@/Components/LandingPage/HeroSection";
 
-import Sun from "@/Components/LandingPage/Sun";
-import Navbar from "@/Components/LandingPage/Navabr";
+
+
 import Cards from "@/Components/LandingPage/Cards";
 
 
@@ -59,9 +59,9 @@ export default function Home() {
           backgroundSize: `${bgSize}% `,
         }}
       >
-        <Sun />
+        
 
-        <Navbar />
+        
 
         <motion.div
           initial={{ y: 0 }}

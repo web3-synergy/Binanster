@@ -17,63 +17,60 @@ import styles from './Feature.module.css';
 const featureTabs = [
     {
         id: 1,
-        title: "The Nothing Paper",
+        title: "Whitepaper",
         label: "Feature One",
-        desc: "A whitepaper about absolutely Nothing — and everything that matters. No hype, no promises, no roadmap to the moon. Just a simple vision: hold, chill, and learn. This is our manifesto — not a pitch deck.",
-
+        desc: "Cemetery of Coins is a memecoin and platform that acknowledges the brutal reality of the crypto market—most coins fail. Instead of ignoring this, the project embraces it, offering a symbolic and practical cemetery where users can burn their worthless tokens, gain insights, and access tools to succeed in future trades or launches. The token powers a platform that provides utilities for traders, project creators, and community members, fostering resilience and opportunity in a volatile market.",
         icon: <Git className={styles.icon} />,
-        img: "/assets/img/landingPage/paper.PNG",
+        img: "/assets/img/landingPage/paper.png",
     },
     {
         id: 2,
-        title: "Why Nothing?",
+        title: "Dust to Rewards",
         label: "Feature Two",
-        desc: "Because sometimes doing less does more. Nothing means peace in a market full of noise. We’re not here to chase — we’re here to hold and laugh while doing it.",
+        desc: "Allow users to burn their dust (worthless or low-value tokens) in the Cemetery of Coins platform to receive benefits, such as tokens, platform fees, solanas or other rewards.",
         icon: <EmojioneMonotoneChains className={styles.icon} />,
         img: "/assets/img/landingPage/paper.PNG",
     },
     {
         id: 3,
-        title: "The power of holding",
+        title: "Dust and Dreams",
         label: "Feature Three",
-        desc: "Time in the market beats timing the market. Patience pays. Holding teaches what no chart can: discipline, mindset, and long-term vision — all wrapped in memes.",
-
+        desc: "Turn the act of burning dust tokens into a fun, rewarding experience with a slot machine or lottery system, where users can win spin tickets earned from burning.",
         icon: <SolarSledgehammerBold className={styles.icon} />,
         img: "/assets/img/landingPage/paper.PNG",
     },
     {
         id: 4,
-        title: "Addition: The Gamble Loop",
+        title: "Volume Bot",
         label: "Feature Four",
-        desc: "When memes turn into slot machines. Endless trading isn’t strategy — it’s gambling. Let’s break the loop and bring back fun without the burnout.",
-
+        desc: "Provide a premium tool for memecoin project creators to boost their token launches, accessible only to token platform olders who meet a minimum token threshold and time holding.",
 
         icon: <MdiAlarmLight className={styles.icon} />,
         img: "/assets/img/landingPage/paper.PNG",
     },
     {
         id: 5,
-        title: "Overtrading is overrated",
+        title: "Boost Token",
         label: "Feature Four",
-        desc: "Chill. Click less. Win more. Most losses come from doing too much. With Nothing, you hold and breathe. Less stress. More clarity.",
+        desc: "A platform feature where users can access real-time market insights or promote their favorite tokens, powered by cemetery of coins platform.",
 
         icon: <Overtrading className={styles.icon} />,
         img: "/assets/img/landingPage/paper.PNG",
     },
     {
         id: 6,
-        title: "Do Nothing, Learn Everything",
+        title: "Bag Workers Team",
         label: "Feature Four",
-        desc: "Let your portfolio teach you. Real growth comes from experience. Holding through the chaos is the lesson — and the reward.",
+        desc: "A decentralized marketplace where users can hire crypto experts (e.g., developers, marketers, community managers) to support their projects, paid in platform tokens.",
 
         icon: <MdiRecycle className={styles.icon} />,
         img: "/assets/img/landingPage/paper.PNG",
     },
     {
         id: 7,
-        title: "Post Like a Bull ",
+        title: "Tombstone NFTs ",
         label: "Feature Four",
-        desc: "Memes are marketing. Hype is a skill. Community is the engine. Every meme, tweet, and post spreads the message. Bull posting isn’t just noise — it’s how we build culture, attract attention, and make Nothing something worth watching.",
+        desc: "Unique NFTs minted when users burn tokens, serving as collectibles or proof of participation. These could have utility, such as unlocking premium features or staking rewards.",
         icon: <Post className={styles.icon} />,
         img: "/assets/img/landingPage/paper.PNG",
     },

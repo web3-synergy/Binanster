@@ -10,20 +10,20 @@ const classes = ['middle', 'left', 'right'];
 const cardData = [
     {
         step: 1,
-        title: "Buy with conviction",
-        description: "Only buy if you're prepared to hold long-term. No panic. No chasing. Just patience.",
+        title: "Token Launch",
+        description: "Finalize website, develop and audit smart contracts, run a marketing campaign, and launch the token. ",
         image: <IcBaselineImage />
     },
     {
         step: 2,
-        title: "Bull Post  & Share Vision",
-        description: "Create content, share memes, and spread the word. Hype with purpose — help shape the future of the coin.",
+        title: "Hackathon",
+        description: "Participate in hackathon to drive platform innovation, secure sponsors, developers, and win rewards.",
         image: <IcBaselineImage />
     },
     {
         step: 3,
-        title: "Let Time Teach You",
-        description: "Track your own journey. Learn about long-term investing through your results — wins, losses, and everything in between.",
+        title: "Platform Launch",
+        description: "Complete platform development, test for functionality and security, release a beta version, and launch officially with a go-to-market strategy.",
         image: <IcBaselineImage />
     }
 ];
@@ -93,8 +93,8 @@ export default function Cards() {
     return (
         <div className='container-lg'>
             <div className={`mb-4 ${styles.intro}`}>
-                <h1>The Nothing Strategy</h1>
-                <p>Sometimes doing nothing is the smartest move.</p>
+                <h1>PROJECT ROADMAP</h1>
+                <p>Burn the past, build the future with us.</p>
             </div>
 
             <div className='position-relative'>
@@ -111,7 +111,7 @@ export default function Cards() {
                 </div>
             </div>
 
-            <div className='d-flex d-sm-none justify-content-start align-items-center' style={{ columnGap: '10px' }}>
+            <div className='d-flex d-sm-none justify-content-end align-items-center' style={{ columnGap: '10px' }}>
                 <div
                     className={`${styles.stepper} ${active === 1 ? styles.disabled : ''}`}
                     onClick={() => handleClick(-1)}

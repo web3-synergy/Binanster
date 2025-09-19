@@ -1,93 +1,317 @@
-
-
 .heroSection {
-  height: calc(100vh ); 
-
-  position: fixed;
-  z-index: 1;
-    display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 0 20px;
+  background: linear-gradient(to bottom, #000000, #33026B);
+  color: #fff;
+  
+  
   text-align: center;
-  background: linear-gradient( #0DD38C 0%, #12152A 100%);
+  position: relative;
+  overflow: hidden;
+  
   
 }
-.heroSection h1 {
 
-  font-size: 40px;
-  font-weight: 900;
-  line-height: 40px;
-  letter-spacing: 0.02em;
-  text-align: center;
-  margin-top: 30px;
+
+.heroVideo {
+  width: 260px;
+  height: auto;
+  margin-bottom: 30px;
+  border-radius: 20px;
+ 
+  
+}
+
+.title {
+  font-size: 34px;
   color: white;
-}
-.heroSection p{
-  color :white
+  margin: 20px 0;
+  
+  letter-spacing: 2px;
+  font-family: var(--font-pixelify);
 }
 
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+}
 
+.timeBox {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px;
+}
+
+.timeIconWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.timeIcon {
+  width: 71.25px;   /* adjust icon size */
+  height: 61.20px;
+}
+
+.timeValue {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  font-weight: bold;
+  font-family: var(--font-rubikpixels);
+  color: #39F945; /* counter text inside image */
+}
+
+.timeBox p {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: white;
+  opacity: 0.9;
+  letter-spacing: 1px;
+  
+
+}
+
+.subtitle {
+  font-size: 20px;
+  margin: 20px auto 35px;
+  max-width: 600px;
+  color: rgb(255, 255, 255);
+  opacity: 0.9;
+  font-family: var(--font-pixelify);
+  letter-spacing: 0.6px;
+  height: 40px;
+  font-weight: 600;
+}
 
 .heroButton {
-  font-family: var(--font-lexend) ;
-  margin-top: 20px;
-  background-color: transparent;
-  border: 1px solid #ffffff;
-  color: #ffff;
-  font-size: 16px;
-  font-weight: 500;
-  text-align: center;
-  border-radius: 2.5rem;
-  padding: 6px 16px;
+  background: #FFDE801F;
+  border: none;
+  color: white;
+  font-family: 'Press Start 2P', monospace;
+  padding: 14px 28px;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
+.heroButton:hover {
+  background: #33026B;
+  transform: scale(1.05);
+  
+}
 
-.heroSection:before {
-  content: "";
-  position: absolute;
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* pushes text left, socials right */
+   /* base gap */
+  width: 1400px;
+  padding: 0 2rem;
+  margin-bottom: 20px;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 600;
+  color: white; /* neon green */
+  
+}
+
+.icon {
+  font-size: 18px;   /* make icons bigger */
+  height: 22px;
+  width: 22px;
+  
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: #39F945;
+   /* zoom on hover */
+}
+.icons{
+  display: flex;
+  gap: 30px;
+}
+.topbar {
+       /* sticks to the top on scroll */
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-
-  z-index: -1;
+  width: 1100px;              /* full width across screen */
+  height: 60px;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 255, 0, 0.18); /* translucent green bar */
+  border-bottom: 1px solid #2c2c2c;
+  z-index: 1000;
+  border-radius: 10px;  
+  margin-bottom: 30px;  
+  margin-left: 150px;
+  margin-top: 20px;        /* stays above other content */
 }
-.heroButton:hover{
-  background-color:var(--shade-of-blue) ;
-  color: #0F1525 ;
-  border: none;
-    border: 1px solid #ffffff;
-}
-
-
-@media screen and (max-width: 992px) {
-    .heroSection h1 {
-        font-size: 52px;
-        line-height: 70px;
-          margin-top: 20px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .heroSection h1 {
-        font-size: 36px;
-        line-height: 50px;
-                   margin-top: 0px;
-    }
+.heroicon {
+  height: 45px;
+  width: auto;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 568px) {
-    .heroSection h1 {
-        font-size: 32px;
-        line-height: 40px;
-
-    }
+.minbutton {
+  padding: 10px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid #39F945;
+  border-radius: 6px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
-@media screen and (max-width: 568px) {
-    .heroSection h1 {
-        font-size: 26px;
-        line-height: 30px;
-    }
+
+.minbutton:hover {
+  background: #39F945;
+  color: black;
+  
+}
+.line{
+  border: 0.6px solid #39F945;
+  border-radius: 20px;
+  margin-top: 15px;
+
+}
+/* 📱 Mobile responsiveness */
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .heroVideo {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+  }
+
+  .title {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    max-width: 90%;
+    margin: 15px auto 25px;
+    height: auto;
+  }
+
+  .countdown {
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin: 20px 0;
+    justify-content: center;
+  }
+
+  .timeBox {
+    text-align: center;
+  }
+
+  .timeIcon {
+    width: 65px;   /* smaller box for mobile */
+  }
+
+  .timeValue {
+    font-size: 20px;
+  }
+
+  .timeBox p {
+    font-size: 0.7rem;
+    margin-top: 4px;
+  }
+
+  .heroButton {
+    font-size: 0.7rem;
+    padding: 12px 20px;
+    margin-top: 15px;
+  }
+
+  .socials {
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+    padding: 0 1rem;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .icons {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .topbar {
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 0;
+    padding: 0 1rem;
+    justify-content: space-between;
+  }
+
+  .heroicon {
+    height: 35px;
+  }
+
+  .minbutton {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+  .name {
+    font-size: 15px;
+    font-weight: 600;
+    color: white; /* neon green */
+    
+  }
+  
+  .icon {
+    font-size: 10px;   /* make icons bigger */
+    height: 20px;
+    width: 20px;
+    
+    cursor: pointer;
+  }
+}
+
+/* 📱 Smaller screens (max 480px) */
+@media (max-width: 480px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .timeIcon {
+    width: 55px;
+  }
+
+  .timeValue {
+    font-size: 16px;
+  }
+
+  .timeBox p {
+    font-size: 0.6rem;
+  }
+
+  .heroButton {
+    font-size: 0.6rem;
+    padding: 10px 16px;
+  }
 }

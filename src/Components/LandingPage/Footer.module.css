@@ -1,6 +1,11 @@
-
+@font-face{
+    font-family: "MyFont";
+    src: url("/fonts/Shadow.ttf") format("truetype");
+    font-weight: normal;
+    font-style:normal;
+}
 .CopyRight{
-    border-top: 1px solid #FFFFFF;
+    border-top: 1px dotted #FFFFFF;
     margin-bottom: 30px;
 }
 .icons{
@@ -14,11 +19,19 @@
 }
 .CopyRight p{
     font-family: var(--font-lexend) ;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 400;
     line-height: 20px;
     text-align: left;
 
+}
+.name{
+    font-family: "MyFont", sans-serif;
+    position: absolute;
+    top: 70px;
+    left: 150px;
+    font-size: 20px;
+    color: white;
 }
 
 

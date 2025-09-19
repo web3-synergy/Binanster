@@ -10,20 +10,31 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { MdContentCopy } from "react-icons/md";
 import { Button, message } from 'antd';
-
+import { Paper} from "../icons/paper";
+import { Pixelify_Sans, Rubik_Pixels } from "next/font/google";
 
 const aboutus  = [
-    { label: 'Twitter', link: 'https://x.com/nothingofsolana?s=21' },
-    { label: 'Telegram Group', link: 'https://t.me/+bvDiSc1DWPo5MjFh' },
+    { label: 'Twitter', link: 'https://x.com/cemeteryofcoins' },
+    { label: 'Telegram Group', link: '/' },
     {label: 'Coingecko', link: '/'},
-]
-3
+];
+
 
 const chart = [
-    { label: 'Pip fun', link: '/' },
+    { label: 'Pump fun', link: '/' },
     { label: 'Dexscreener', link: '/' },
     
 ];
+const rubikPixels = Rubik_Pixels({
+    subsets: ["latin"],
+    weight: "400",
+    variable: "--font-rubikpixels",
+  });
+  const pixelify = Pixelify_Sans({
+    subsets: ["latin"],
+    weight: ["400", "700"],
+    variable: "--font-pixelify",
+  });
 
 
 
@@ -52,7 +63,8 @@ export default function Footer() {
                     transition={{ duration: 1, ease: "easeOut" }}
                     viewport={{ once: true }}
                 >
-                    <Image src="/logo.svg" alt="Logo" width={180} height={40}  priority />
+                    <Image src="/icon.png" alt="Logo" width={100} height={70}  priority />
+                    <p className={styles.name}>CEMENTRY OF COIN</p>
                 </motion.div>
 
                 <div className='col-6 col-sm-6 col-md-4 ps-4 ps-md-0' >
@@ -159,15 +171,17 @@ function CopyRight() {
             transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
             viewport={{ once: true }}
         >
-            <p>2025 Nothing. All rights reserved</p>
+            <p>&copy; 2025 All rights Reserved Cemetery of Coins. Design by Uxearch</p>
             <div className={`d-flex align-items-center justify-content-end  ${styles.icons}`}>
             <a href="/" target="_blank" rel="noopener noreferrer">
   <Image src={Dexscreener} alt="Dexscreener" width={24} height={24} className={styles.icon} />
-</a>
-                <Link href="/" target="_blank"><DextoolsSeeklogo className={`${styles.icon} `} /></Link>
-                <Link href="https://t.me/+bvDiSc1DWPo5MjFh" target="_blank"><BxBxlTelegram className={`${styles.icon}`} /></Link>
+</a> 
                 <Link href='https://x.com/nothingofsolana?s=21' target="_blank" ><AkarIconsXFill className={styles.icon} /></Link>
+                <Link href="https://t.me/+bvDiSc1DWPo5MjFh" target="_blank"><BxBxlTelegram className={`${styles.icon}`} /></Link>
+                
 
+                <Link href="/" target="_blank"><Paper className={`${styles.icon} `} /></Link>
+                
             </div>
         </motion.div>
     );

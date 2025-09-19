@@ -6,8 +6,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 
 export const metadata = {
-  title: "JustdoNothing ",
-  description: "justdoNothing",
+  title: "Cementry of coins ",
+  description: "Cementry of coins",
 };
 
 const red_hat_display = Red_Hat_Display({
@@ -21,6 +21,7 @@ const lexend = Lexend({
   variable: "--font-lexend",
   display: "block",
 });
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
