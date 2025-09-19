@@ -21,7 +21,7 @@ const featureTabs = [
         label: "Feature One",
         desc: "Cemetery of Coins is a memecoin and platform that acknowledges the brutal reality of the crypto market—most coins fail. Instead of ignoring this, the project embraces it, offering a symbolic and practical cemetery where users can burn their worthless tokens, gain insights, and access tools to succeed in future trades or launches. The token powers a platform that provides utilities for traders, project creators, and community members, fostering resilience and opportunity in a volatile market.",
         icon: <Git className={styles.icon} />,
-        img: "/assets/img/landingPage/paper.png",
+        img: "/assets/img/landingPage/paper.PNG",
     },
     {
         id: 2,
@@ -188,4 +188,5 @@ export default function Feature() {
         </motion.div>
     );
 }
+
 
