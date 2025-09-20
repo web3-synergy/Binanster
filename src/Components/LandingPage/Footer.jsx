@@ -16,7 +16,7 @@ import { Pixelify_Sans, Rubik_Pixels } from "next/font/google";
 const aboutus  = [
     { label: 'Twitter', link: 'https://x.com/cemeteryofcoins' },
     { label: 'Telegram Group', link: '/' },
-    {label: 'Coingecko', link: '/'},
+    
 ];
 
 
@@ -177,14 +177,14 @@ function CopyRight() {
   Cemetery of Coins.
 </p>
             <div className={`d-flex align-items-center justify-content-end  ${styles.icons}`}>
-            <a href="/" target="_blank" rel="noopener noreferrer">
+            <a href="#" target="_blank" rel="noopener noreferrer">
   <Image src={Dexscreener} alt="Dexscreener" width={24} height={24} className={styles.icon} />
 </a> 
-                <Link href='https://x.com/nothingofsolana?s=21' target="_blank" ><AkarIconsXFill className={styles.icon} /></Link>
-                <Link href="https://t.me/+bvDiSc1DWPo5MjFh" target="_blank"><BxBxlTelegram className={`${styles.icon}`} /></Link>
+                <Link href='https://x.com/cemeteryofcoins' target="_blank" ><AkarIconsXFill className={styles.icon} /></Link>
+                <Link href="#" target="_blank"><BxBxlTelegram className={`${styles.icon}`} /></Link>
                 
 
-                <Link href="/" target="_blank"><Paper className={`${styles.icon} `} /></Link>
+                <Link href="#" target="_blank"><Paper className={`${styles.icon} `} /></Link>
                 
             </div>
         </motion.div>

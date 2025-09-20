@@ -8,7 +8,6 @@ export default function ParticlesBackground() {
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      // load slim bundle
       await loadSlim(engine);
     }).then(() => setInit(true));
   }, []);
@@ -18,12 +17,13 @@ export default function ParticlesBackground() {
   return (
     <div
       style={{
-        position: "fixed", // fixed keeps it behind no matter where you scroll
+        position: "fixed", // stays fixed behind everything
         top: 0,
         left: 0,
         width: "100%",
         height: "100%",
-        zIndex: -1, // always behind content
+        zIndex: 3, // keep background behind content
+        pointerEvents: "none",
       }}
     >
       <Particles
@@ -31,23 +31,54 @@ export default function ParticlesBackground() {
         options={{
           background: { color: { value: "transparent" } },
           particles: {
-            color: { value: "#B780FF" },
-            links: {
-              color: "#B780FF",
-              distance: 120,
-              enable: true,
-              opacity: 0.4,
-              width: 1,
+            number: {
+              value: 600,
+              density: { enable: true, area: 473 },
             },
-            move: { enable: true, speed: 1 },
-            number: { value: 70, density: { enable: true, area: 800 } },
-            opacity: { value: 0.5 },
-            shape: { type: "circle" },
-            size: { value: { min: 1, max: 4 } },
+            color: { value: "#B780FF" },
+            shape: {
+              type: "circle",
+              stroke: { width: 0, color: "#000000" },
+              polygon: { nb_sides: 5 },
+              image: { src: "img/github.svg", width: 100, height: 100 },
+            },
+            opacity: {
+              value: 0.3,
+              random: false,
+              animation: { enable: true, speed: 1, minimumValue: 0, sync: false },
+            },
+            size: {
+              value: 2,
+              random: { enable: true, minimumValue: 0.3 },
+              animation: { enable: false },
+            },
+            links: { enable: false }, // no connecting lines
+            move: {
+              enable: true,
+              speed: 1,
+              direction: "top",
+              random: true,
+              straight: false,
+              outModes: { default: "out" },
+              bounce: false,
+            },
           },
           interactivity: {
-            events: { onHover: { enable: true, mode: "repulse" } },
-            modes: { repulse: { distance: 100, duration: 0.4 } },
+            events: {
+              onHover: { enable: true, mode: "bubble" },
+              onClick: { enable: true, mode: "repulse" },
+              resize: true,
+            },
+            modes: {
+              bubble: {
+                distance: 250,
+                size: 0,
+                duration: 2,
+                opacity: 0,
+                speed: 3,
+              },
+              repulse: { distance: 400, duration: 0.4 },
+            },
           },
           detectRetina: true,
         }}

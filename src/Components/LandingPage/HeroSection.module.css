@@ -38,7 +38,7 @@
 }
 
 .title {
-  font-size: 34px;
+  font-size: 28px;
   color: white;
   margin: 20px 0;
   
@@ -49,7 +49,7 @@
 .countdown {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 19px;
   margin: 30px 0;
 }
 
@@ -59,7 +59,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-width: 90px;
+  min-width: 81px;
 }
 
 .timeIconWrapper {
@@ -68,7 +68,7 @@
 }
 
 .timeIcon {
-  width: 71.25px;   /* adjust icon size */
+  width: 91.25px;   /* adjust icon size */
   height: 61.20px;
 }
 
@@ -77,15 +77,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 32px;
+  font-size: 34px;
   font-weight: bold;
   font-family: var(--font-rubikpixels);
-  color: #39F945; /* counter text inside image */
+  color: rgb(57, 249, 69); /* counter text inside image */
 }
 
 .timeBox p {
   margin-top: 6px;
-  font-size: 0.85rem;
+  font-size: 12px;
   color: white;
   opacity: 0.9;
   letter-spacing: 1px;
@@ -103,6 +103,18 @@
   letter-spacing: 0.6px;
   height: 40px;
   font-weight: 600;
+}
+.ticker {
+  font-size: 12px;
+  max-width: 600px;
+  color: rgb(255, 255, 255);
+  opacity: 0.9;
+  font-family: var(--font-redhat);
+  letter-spacing: 0.6px;
+  margin: 20px auto 35px;
+  font-weight: 361px;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .heroButton {
@@ -167,7 +179,7 @@
   justify-content: space-between;
   align-items: center;
   background: rgba(0, 255, 0, 0.18); /* translucent green bar */
-  border-bottom: 1px solid #2c2c2c;
+  
   z-index: 1000;
   border-radius: 10px;  
   margin-bottom: 30px;  
@@ -175,8 +187,8 @@
   margin-top: 20px;        /* stays above other content */
 }
 .heroicon {
-  height: 45px;
-  width: auto;
+  height: 46px;
+  width: 46px;
   cursor: pointer;
 }
 
@@ -200,7 +212,7 @@
 .line{
   border: 0.6px solid #39F945;
   border-radius: 20px;
-  margin-top: 15px;
+  margin-top: 7px;
   margin-bottom: 15px;
 
 }
@@ -253,7 +265,7 @@
   }
 
   .subtitle {
-    font-size: 16px;
+    font-size: 20px;
     max-width: 90%;
     margin: 15px auto 25px;
     height: auto;
@@ -261,7 +273,7 @@
 
   .countdown {
     flex-wrap: nowrap;
-    gap: 0.2px;
+    gap: 4.2px;
     margin: 20px 0;
     justify-content: center;
   }
@@ -271,7 +283,7 @@
   }
 
   .timeIcon {
-    width: 71.25px;   /* adjust icon size */
+    width: 91.25px;   /* adjust icon size */
     height: 61.20px;
   }
 
@@ -310,14 +322,14 @@
 
   .topbar {
     width: 370px;
-    margin: 10px 10px;
+    margin: 50px 10px;
     border-radius: 10px;
     padding: 0 1rem;
     justify-content: space-between;
   }
 
   .heroicon {
-    height: 35px;
+    height: 46px;
   }
 
   .minbutton {
@@ -333,8 +345,8 @@
   
   .icon {
     font-size: 10px;   /* make icons bigger */
-    height: 15px;
-    width: 15px;
+    height: 19px;
+    width: 19px;
     
     cursor: pointer;
   }
@@ -347,25 +359,25 @@
   }
 
   .subtitle {
-    font-size: 14px;
+    font-size: 20px;
   }
 
   .timeIcon {
-    width: 71.25px;   /* adjust icon size */
+    width: 77.25px;   /* adjust icon size */
     height: 61.20px;
   }
 
   .timeValue {
-    font-size: 34px;
+    font-size: 30px;
     font-weight: bold;
     font-family: var(--font-rubikpixels);
     color: rgb(57, 249, 69); /* counter text inside image */
   }
 
   .timeBox p {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     margin-top: 4px;
-    font-weight: bold;
+    font-weight: small;
   }
 
   .heroButton {
