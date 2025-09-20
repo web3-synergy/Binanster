@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { AkarIconsXFill } from "../icons/AkarIconsXFill";
 import { BxBxlTelegram } from "../icons/BxBxlTelegram";
 import { Dexscreener } from "../icons/dexscreener";
-import { Paper} from "../icons/paper";
+import { Paper } from "../icons/paper";
 
 // Fonts
 const pixelify = Pixelify_Sans({
@@ -34,7 +34,6 @@ export default function HeroSection() {
   const calculateTimeLeft = () => {
     const targetDate = new Date("2025-09-30"); 
     const difference = targetDate - new Date();
-
     let timeLeft = {};
     if (difference > 0) {
       timeLeft = {
@@ -46,7 +45,6 @@ export default function HeroSection() {
     }
     return timeLeft;
   };
-
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   useEffect(() => {
@@ -56,34 +54,23 @@ export default function HeroSection() {
     return () => clearInterval(timer);
   }, []);
 
+  // Animation on scroll
   useEffect(() => {
-    let ticking = false;
-
-    const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const scrollPosition = window.scrollY;
-          const scaleValue = 1 - scrollPosition * 0.0005;
-
-          controls.start({
-            scale: Math.max(scaleValue, 0.8),
-            transition: { duration: 0.6, ease: "easeOut" },
-          });
-
-          ticking = false;
-        });
-
-        ticking = true;
-      }
-    };
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            controls.start({ opacity: 1, scale: 1, transition: { duration: 1, ease: "easeOut" } });
+            controls.start({
+              opacity: 1,
+              x: 0,
+              transition: { duration: 1, ease: "easeOut" },
+            });
           } else {
-            controls.start({ opacity: 0.6, transition: { duration: 1, ease: "easeInOut" } });
+            controls.start({
+              opacity: 0,
+              x: -100,
+              transition: { duration: 0.8, ease: "easeInOut" },
+            });
           }
         });
       },
@@ -91,18 +78,23 @@ export default function HeroSection() {
     );
 
     const element = ref.current;
-    if (element) {
-      observer.observe(element);
-      window.addEventListener('scroll', handleScroll);
-    }
+    if (element) observer.observe(element);
 
     return () => {
-      if (element) {
-        observer.unobserve(element);
-        window.removeEventListener('scroll', handleScroll);
-      }
+      if (element) observer.unobserve(element);
     };
   }, [controls]);
+
+  // ✅ Contract Address Copy Logic
+  const [copied, setCopied] = useState(false);
+  const contractAddress = "Coming soon"; 
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(contractAddress).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000); // reset after 2s
+    });
+  };
 
   return (
     <div 
@@ -111,25 +103,19 @@ export default function HeroSection() {
         ${styles.heroSection} ${pixelify.variable} ${redHat.variable} ${rubikPixels.variable}`}
     >
       <motion.div
-        initial={{ opacity: 0, scale: 1 }}
+        initial={{ opacity: 0, x: -100 }}   // start left
         animate={controls}
         transition={{ duration: 1, ease: "easeOut" }}
         className={styles.line}
       >
         <div className={styles.topbar}>
-            <img src="icon.png" alt="cemetery of coins" className={styles.heroicon} />
-            <button className={styles.minbutton}>Join Whitelist</button>
+          <img src="icon.png" alt="cemetery of coins" className={styles.heroicon} />
+          <button className={styles.minbutton}>Join Whitelist</button>
         </div>
 
         {/* Background Video */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className={styles.heroVideo}
-        >
-          <source src="Cemetery.mp4" type="video/mp4" />
+        <video autoPlay muted loop playsInline className={styles.heroVideo}>
+          <source src="Cemetery.MP4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
@@ -138,63 +124,55 @@ export default function HeroSection() {
 
         {/* Countdown */}
         <div className={styles.countdown}>
-          {/* Days */}
-          <div className={styles.timeBox}>
-            <div className={styles.timeIconWrapper}>
-              <img src="Box.png" alt="Days" className={styles.timeIcon} />
-              <span className={styles.timeValue}>{timeLeft.days || "00"}</span>
-            </div>
-            <p>Days</p>
-          </div>
+  {["Days", "Hours", "Minutes", "Seconds"].map((label, i) => {
+    const values = [timeLeft.days, timeLeft.hours, timeLeft.minutes, timeLeft.seconds];
 
-          {/* Hours */}
-          <div className={styles.timeBox}>
-            <div className={styles.timeIconWrapper}>
-              <img src="Box.png" alt="Hours" className={styles.timeIcon} />
-              <span className={styles.timeValue}>{timeLeft.hours || "00"}</span>
-            </div>
-            <p>Hours</p>
-          </div>
+    // Decide what to show as extra label
+    let extraLabel = "—";
+    if (label === "Days") extraLabel = "Countdown";
+    if (label === "Seconds") extraLabel = "Solana";
 
-          {/* Minutes */}
-          <div className={styles.timeBox}>
-            <div className={styles.timeIconWrapper}>
-              <img src="Box.png" alt="Minutes" className={styles.timeIcon} />
-              <span className={styles.timeValue}>{timeLeft.minutes || "00"}</span>
-            </div>
-            <p>Minutes</p>
-          </div>
+    return (
+      <div key={label} className={styles.timeBox}>
+        {/* Extra label above the box */}
+        <p className={`${styles.extraLabel} ${extraLabel === "—" ? styles.hiddenLabel : ""}`}>
+          {extraLabel}
+        </p>
 
-          {/* Seconds */}
-          <div className={styles.timeBox}>
-            <div className={styles.timeIconWrapper}>
-              <img src="Box.png" alt="Seconds" className={styles.timeIcon} />
-              <span className={styles.timeValue}>{timeLeft.seconds || "00"}</span>
-            </div>
-            <p>Seconds</p>
-          </div>
+        <div className={styles.timeIconWrapper}>
+          <img src="Box.png" alt={label} className={styles.timeIcon} />
+          <span className={styles.timeValue}>{values[i] || "00"}</span>
         </div>
+
+        {/* Bottom label (always Days, Hours, Minutes, Seconds) */}
+        <p>{label}</p>
+      </div>
+    );
+  })}
+</div>
+
 
         {/* Subtitle */}
         <h1 className={styles.subtitle}>
           We don’t speak to the dead – We just bury them.
         </h1>
 
-        {/* Button */}
-        <a href="/" className={styles.heroLink}>
-          <button className={`btn ${styles.heroButton}`}>
-            <span>Soon Token Address</span>
+        {/* ✅ Contract Copy Button */}
+        <div className={styles.contractWrapper}>
+          <button onClick={handleCopy} className={styles.contractButton}>
+            Soon Token Address
           </button>
-        </a>
+          {copied && <span className={styles.copiedText}>¡Contract Copied!</span>}
+        </div>
 
         {/* Socials */}
         <div className={styles.socials}>
           <p className={styles.name}>Cemetery of Coins</p>
           <div className={styles.icons}>
-           <Link href='https://x.com/nothingofsolana?s=21' target="_blank" ><Dexscreener className={styles.icon} /></Link>
-           <Link href='https://x.com/nothingofsolana?s=21' target="_blank" ><AkarIconsXFill className={styles.icon} /></Link>
-           <Link href="https://t.me/+bvDiSc1DWPo5MjFh" target="_blank"><BxBxlTelegram className={`${styles.icon}`} /></Link>
-           <Link href="https://t.me/+bvDiSc1DWPo5MjFh" target="_blank"><Paper className={`${styles.icon}`} /></Link>
+            <Link href='https://x.com/nothingofsolana?s=21' target="_blank"><Dexscreener className={styles.icon} /></Link>
+            <Link href='https://x.com/nothingofsolana?s=21' target="_blank"><AkarIconsXFill className={styles.icon} /></Link>
+            <Link href="https://t.me/+bvDiSc1DWPo5MjFh" target="_blank"><BxBxlTelegram className={styles.icon} /></Link>
+            <Link href="https://t.me/+bvDiSc1DWPo5MjFh" target="_blank"><Paper className={styles.icon} /></Link>
           </div>
         </div>
       </motion.div>

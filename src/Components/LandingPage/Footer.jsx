@@ -171,7 +171,7 @@ function CopyRight() {
             transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
             viewport={{ once: true }}
         >
-            <p>&copy; 2025 All rights Reserved Cemetery of Coins. Design by Uxearch</p>
+            <p>&copy; 2025 All rights Reserved Cemetery of Coins.</p>
             <div className={`d-flex align-items-center justify-content-end  ${styles.icons}`}>
             <a href="/" target="_blank" rel="noopener noreferrer">
   <Image src={Dexscreener} alt="Dexscreener" width={24} height={24} className={styles.icon} />

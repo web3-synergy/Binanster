@@ -1,3 +1,10 @@
+@font-face{
+  font-family: "MyFont";
+  src: url("/fonts/Shadow.ttf") format("truetype");
+  font-weight: normal;
+  font-style:normal;
+}
+
 .heroSection {
   background: linear-gradient(to bottom, #000000, #33026B);
   color: #fff;
@@ -9,7 +16,17 @@
   
   
 }
+.extraLabel {
+  font-size: 13px;
+  color: #00ff00;
+  margin-bottom: 6px;
+  font-family: var(--font-rubikpixels);
+  min-height: 18px; /* keep equal height */
+}
 
+.hiddenLabel {
+  visibility: hidden; /* invisible but still takes space */
+}
 
 .heroVideo {
   width: 260px;
@@ -26,7 +43,7 @@
   margin: 20px 0;
   
   letter-spacing: 2px;
-  font-family: var(--font-pixelify);
+  font-family: "MyFont", sans-serif;
 }
 
 .countdown {
@@ -186,6 +203,35 @@
   margin-top: 15px;
 
 }
+.contractWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between button and text */
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.contractButton {
+  background: #FFDE801F; /* purple button */
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contractButton:hover {
+  background: #a262ff;
+}
+
+.copiedText {
+  color: #3DC36F; /* green */
+  font-size: 14px;
+  font-weight: 600;
+}
 /* 📱 Mobile responsiveness */
 @media (max-width: 768px) {
   .heroSection {
@@ -194,10 +240,10 @@
   }
 
   .heroVideo {
-    width: 100%;
+    width: 200px;
     max-width: 350px;
-    margin: 0 auto 20px;
-    border-radius: 8px;
+    margin: 20px auto 20px;
+    border-radius: 30px;
   }
 
   .title {
@@ -214,7 +260,7 @@
 
   .countdown {
     flex-wrap: nowrap;
-    gap: 10px;
+    gap: 0.2px;
     margin: 20px 0;
     justify-content: center;
   }
@@ -224,16 +270,21 @@
   }
 
   .timeIcon {
-    width: 65px;   /* smaller box for mobile */
+    width: 71.25px;   /* adjust icon size */
+    height: 61.20px;
   }
 
   .timeValue {
-    font-size: 20px;
+    font-size: 34px;
+    font-weight: bold;
+    font-family: var(--font-rubikpixels);
+    color: rgb(57, 249, 69); /* counter text inside image */
   }
 
   .timeBox p {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     margin-top: 4px;
+    font-weight: bold;
   }
 
   .heroButton {
@@ -243,23 +294,23 @@
   }
 
   .socials {
-    flex-direction: row;
+    flex-direction: column;
     gap: 12px;
     width: 100%;
     padding: 0 1rem;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 30px;
   }
 
   .icons {
     justify-content: center;
-    gap: 10px;
+    gap: 50px;
   }
 
   .topbar {
-    width: 100%;
-    margin: 10px 0;
-    border-radius: 0;
+    width: 370px;
+    margin: 10px 10px;
+    border-radius: 10px;
     padding: 0 1rem;
     justify-content: space-between;
   }
@@ -273,7 +324,7 @@
     padding: 8px 16px;
   }
   .name {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 600;
     color: white; /* neon green */
     
@@ -299,15 +350,21 @@
   }
 
   .timeIcon {
-    width: 55px;
+    width: 71.25px;   /* adjust icon size */
+    height: 61.20px;
   }
 
   .timeValue {
-    font-size: 16px;
+    font-size: 34px;
+    font-weight: bold;
+    font-family: var(--font-rubikpixels);
+    color: rgb(57, 249, 69); /* counter text inside image */
   }
 
   .timeBox p {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    font-weight: bold;
   }
 
   .heroButton {
