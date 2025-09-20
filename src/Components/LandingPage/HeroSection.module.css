@@ -20,7 +20,7 @@
   font-size: 13px;
   color: #00ff00;
   margin-bottom: 6px;
-  font-family: var(--font-rubikpixels);
+  font-family: var(--font-redhat);
   min-height: 18px; /* keep equal height */
 }
 
@@ -29,7 +29,7 @@
 }
 
 .heroVideo {
-  width: 260px;
+  width: 200px;
   height: auto;
   margin-bottom: 30px;
   border-radius: 20px;
@@ -142,8 +142,8 @@
 
 .icon {
   font-size: 18px;   /* make icons bigger */
-  height: 22px;
-  width: 22px;
+  height: 15px;
+  width: 15px;
   
   cursor: pointer;
 }
@@ -201,6 +201,7 @@
   border: 0.6px solid #39F945;
   border-radius: 20px;
   margin-top: 15px;
+  margin-bottom: 15px;
 
 }
 .contractWrapper {
@@ -240,7 +241,7 @@
   }
 
   .heroVideo {
-    width: 200px;
+    width: 150px;
     max-width: 350px;
     margin: 20px auto 20px;
     border-radius: 30px;
@@ -332,8 +333,8 @@
   
   .icon {
     font-size: 10px;   /* make icons bigger */
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
     
     cursor: pointer;
   }

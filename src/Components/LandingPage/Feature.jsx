@@ -117,13 +117,20 @@ export default function Feature() {
     };
 
     return (
+        
         <motion.div
             ref={ref}
             initial={{ opacity: 0, y: 100, scale: 0.8 }}
             animate={controls}
             transition={{ duration: 2 }}
-            className={`container-lg ${styles.main} px-2 `}
+            className={`container-lg  px-2 `}
         >
+            {/* ✅ Section Title */}
+          <div className={styles.sectionHeader}>
+            <h2>OUR VISION</h2>
+            <p></p>
+          </div>
+            <div className={styles.main}>
             <div className='px-2 px-sm-3 pt-4 pb-2 pb-sm-4'>
                 <div className='pb-4'>
                     <div className={`d-flex  flex-column justify-content-start align-items-start ${styles.details}`}>
@@ -149,6 +156,7 @@ export default function Feature() {
                             </motion.p>
                         </motion.div>
                     </div>
+                </div>
                 </div>
 
                 <div className={`d-flex flex-wrap flex-md-nowrap justify-content-center ${styles.sidebar}`}>
