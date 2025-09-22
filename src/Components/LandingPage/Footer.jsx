@@ -63,7 +63,7 @@ export default function Footer() {
                     transition={{ duration: 1, ease: "easeOut" }}
                     viewport={{ once: true }}
                 >
-                    <Image src="/icon.png" alt="Logo" width={100} height={70}  priority />
+                    <Image src="/icon.png" alt="Logo" width={70} height={70}  priority />
                     <p className={styles.name}>CEMENTRY OF COIN</p>
                 </motion.div>
 
