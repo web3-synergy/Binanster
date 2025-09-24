@@ -1,0 +1,40 @@
+import React from 'react';
+
+export function Believers(props) {
+  return (
+    <svg
+      width="1em"
+      height="1em"
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}  // this makes className / aria-label work
+    >
+      <mask
+        id="mask0_13_18"
+        style={{ maskType: 'luminance' }}   // ✅ fixed
+        maskUnits="userSpaceOnUse"
+        x="0"
+        y="2"
+        width="18"
+        height="14"
+      >
+        <path
+          d="M15.75 3H2.25C2.05109 3 1.86032 3.07902 1.71967 3.21967C1.57902 3.36032 1.5 3.55109 1.5 3.75V14.25C1.5 14.4489 1.57902 14.6397 1.71967 14.7803C1.86032 14.921 2.05109 15 2.25 15H15.75C15.9489 15 16.1397 14.921 16.2803 14.7803C16.421 14.6397 16.5 14.4489 16.5 14.25V3.75C16.5 3.55109 16.421 3.36032 16.2803 3.21967C16.1397 3.07902 15.9489 3 15.75 3Z"
+          fill="white"
+          stroke="white"
+          strokeWidth="1.5"
+        />
+        <path
+          d="M9 6.375V11.625M12 9V11.625M6 8.25V11.625"
+          stroke="black"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+      </mask>
+      <g mask="url(#mask0_13_18)">
+        <path d="M0 0H18V18H0V0Z" fill="white" />
+      </g>
+    </svg>
+  );
+}

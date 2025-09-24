@@ -7,6 +7,9 @@ import { AkarIconsXFill } from "../icons/AkarIconsXFill";
 import { BxBxlTelegram } from "../icons/BxBxlTelegram";
 import { Dexscreener } from "../icons/dexscreener";
 import { Paper } from "../icons/paper";
+import { Tokenomics} from "../icons/Tokenomics";
+import { Believers } from "../icons/Believers";
+
 
 // Fonts
 const pixelify = Pixelify_Sans({
@@ -28,6 +31,7 @@ const rubikPixels = Rubik_Pixels({
 export default function HeroSection() {
   const videoRef = useRef(null);
   const [soundEnabled, setSoundEnabled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   // Countdown timer
   const calculateTimeLeft = () => {
@@ -64,12 +68,11 @@ export default function HeroSection() {
     });
   };
 
-  // ✅ Enable sound
+  // Enable sound
   const enableSound = () => {
     if (videoRef.current && !soundEnabled) {
       videoRef.current.muted = false;
-      videoRef.current.removeAttribute("muted"); // 🚀 force unmute
-
+      videoRef.current.removeAttribute("muted");
       const playPromise = videoRef.current.play();
       if (playPromise !== undefined) {
         playPromise.catch((error) =>
@@ -85,10 +88,8 @@ export default function HeroSection() {
     const handleUserInteraction = () => {
       enableSound();
     };
-
     window.addEventListener("click", handleUserInteraction, { once: true });
     window.addEventListener("scroll", handleUserInteraction, { once: true });
-
     return () => {
       window.removeEventListener("click", handleUserInteraction);
       window.removeEventListener("scroll", handleUserInteraction);
@@ -101,15 +102,72 @@ export default function HeroSection() {
         ${styles.heroSection} ${pixelify.variable} ${redHat.variable} ${rubikPixels.variable}`}
     >
       <div className={styles.line}>
+        {/* Topbar */}
         <div className={styles.topbar}>
           <img
             src="icon.png"
             alt="cemetery of coins"
             className={styles.heroicon}
           />
-          <button className={styles.minbutton}>Join Whitelist</button>
-        </div>
 
+<div className={styles.desktopMenu}>
+  <Link href="/believers" className={styles.menuItem}>
+    <Believers className={styles.menuicon} aria-label="Believer" />
+    Believers
+  </Link>
+
+  <Link href="/Tokenomics" className={styles.menuItem}>
+    <Tokenomics className={styles.menuicon} aria-label="Tokenomics" />
+    Tokenomics
+  </Link>
+
+  <span className={`${styles.menuItem} ${styles.disabled}`}>Dapp Soon</span>
+
+  <button className={styles.minbutton}>Join Whitelist</button>
+</div>
+
+          {/* Mobile Menu Button */}
+          <button className={styles.menuButton} onClick={() => setMenuOpen(!menuOpen)}>
+            ☰
+          </button>
+
+           {/* Mobile Menu Overlay */}
+{menuOpen && (
+  <>
+    <div
+      className={styles.mobileMenuOverlay}
+      onClick={() => setMenuOpen(false)}
+    ></div>
+
+    <div className={styles.mobileMenu}>
+      {/* Top row: dApp Soon left, Join Whitelist right */}
+      <div className={styles.mobileTopRow}>
+        <span className={`${styles.menuItem} ${styles.disabled}`}>dApp Soon</span>
+        <button className={styles.minbutton}>Join Whitelist</button>
+      </div>
+
+      {/* Links below */}
+      <div className={styles.mobilelink}>
+      <Link
+        href="/believers"
+        className={styles.menuItem}
+        onClick={() => setMenuOpen(false)}
+      >
+        <Believers className={styles.menuicon} aria-label="Believer" /> Believers
+      </Link>
+
+      <Link
+        href="/Tokenomics"
+        className={styles.menuItem}
+        onClick={() => setMenuOpen(false)}
+      >
+        <Tokenomics className={styles.menuicon} aria-label="Tokenomics" /> Tokenomics
+      </Link>
+      </div>
+    </div>
+  </>
+)}
+</div>
         {/* Background Video */}
         <video
           ref={videoRef}
@@ -122,8 +180,6 @@ export default function HeroSection() {
           <source src="Cemetery.MP4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-
-        
 
         {/* Title */}
         <h1 className={styles.title}>CEMETERY OF COINS</h1>
@@ -174,9 +230,7 @@ export default function HeroSection() {
           <button onClick={handleCopy} className={styles.contractButton}>
             Soon Token Address
           </button>
-          {copied && (
-            <span className={styles.copiedText}>¡Contract Copied!</span>
-          )}
+          {copied && <span className={styles.copiedText}>¡Contract Copied!</span>}
         </div>
 
         {/* Socials */}

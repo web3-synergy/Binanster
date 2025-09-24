@@ -6,12 +6,12 @@ import { GoArrowRight, GoArrowLeft } from "react-icons/go";
 
 const classes = ['middle', 'left', 'right'];
 
-// 🔹 Step 1: Different card data
+// Card data
 const cardData = [
     {
         step: 1,
         title: "Token Launch",
-        description: "Finalize website, develop and audit smart contracts, run a marketing campaign, and launch the token. ",
+        description: "Finalize website, develop and audit smart contracts, run a marketing campaign, and launch the token.",
         image: <IcBaselineImage />
     },
     {
@@ -41,53 +41,53 @@ export default function Cards() {
                     entry.target.classList.remove(styles.inView);
                 }
             });
-        }, {
-            threshold: 0.1
+        }, { threshold: 0.1 });
+
+        cardRefs.current.forEach(ref => {
+            if (ref) observer.observe(ref);
         });
 
-        const currentRefs = cardRefs.current;
-        currentRefs.forEach(ref => observer.observe(ref));
-
         return () => {
-            currentRefs.forEach(ref => observer.unobserve(ref));
+            cardRefs.current.forEach(ref => {
+                if (ref) observer.unobserve(ref);
+            });
         };
     }, []);
 
     const handleClick = (direction) => {
         const newActive = active + direction;
+        if (newActive < 1 || newActive > cardData.length) return;
+
         const oldActive = active;
-        if (newActive >= 1 && newActive <= 3) {
-            cardRefs.current[active - 1].classList.add(styles.exitActive);
+        const oldCard = cardRefs.current[oldActive - 1];
+        const newCard = cardRefs.current[newActive - 1];
 
-            setTimeout(() => {
-                setActive(newActive);
+        if (oldCard) oldCard.classList.add(styles.exitActive);
 
-                cardRefs.current.forEach((card, index) => {
-                    if (index === oldActive - 1 && direction === +1) {
-                        card.style.transitionDuration = "1s";
-                        card.style.transform = `translateX(-${(oldActive - 1) * 100}%) scale3d(0.3, 0.3, 0.3)`;
-                        card.style.opacity = 0;
-                    } else if (index === newActive - 1 && direction === -1) {
-                        card.style.transitionDuration = "1s";
-                        card.style.transform = `translateX(-${(newActive - 1) * 100}%) scaleX(1)`;
-                        card.style.opacity = 1;
-                    } else {
-                        if (index > newActive - 1 && direction === -1) {
-                            card.classList.remove(styles.exitActive);
-                            card.style.transform = `translateX(-${(newActive - 1) * 100}%)`;
-                            card.style.transitionDuration = "1s";
-                        }
-                        if (index > oldActive - 1 && direction === +1) {
-                            card.classList.remove(styles.exitActive);
-                            card.style.transform = `translateX(-${(newActive - 1) * 100}%)`;
-                            card.style.transitionDuration = "1s";
-                        }
-                    }
-                });
+        setTimeout(() => {
+            setActive(newActive);
 
-                cardRefs.current[newActive - 1].classList.add(styles.inView);
-            }, 500);
-        }
+            cardRefs.current.forEach((card, index) => {
+                if (!card) return;
+
+                if (index === oldActive - 1) {
+                    card.style.transition = "1s";
+                    card.style.transform = `translateX(-${(oldActive - 1) * 100}%) scale(0.3)`;
+                    card.style.opacity = 0;
+                } else if (index === newActive - 1) {
+                    card.style.transition = "1s";
+                    card.style.transform = `translateX(-${(newActive - 1) * 100}%) scale(1)`;
+                    card.style.opacity = 1;
+                } else {
+                    card.style.transition = "1s";
+                    card.style.transform = `translateX(-${(newActive - 1) * 100}%)`;
+                    card.style.opacity = 0.5;
+                    card.classList.remove(styles.exitActive);
+                }
+            });
+
+            if (newCard) newCard.classList.add(styles.inView);
+        }, 500);
     };
 
     return (
@@ -115,14 +115,12 @@ export default function Cards() {
                 <div
                     className={`${styles.stepper} ${active === 1 ? styles.disabled : ''}`}
                     onClick={() => handleClick(-1)}
-                    disabled={active === 1}
                 >
                     <GoArrowLeft className={styles.iconStep} />
                 </div>
                 <div
-                    className={`${styles.stepper} ${active === 3 ? styles.disabled : ''}`}
+                    className={`${styles.stepper} ${active === cardData.length ? styles.disabled : ''}`}
                     onClick={() => handleClick(+1)}
-                    disabled={active === 3}
                 >
                     <GoArrowRight className={styles.iconStep} />
                 </div>
@@ -131,7 +129,6 @@ export default function Cards() {
     );
 }
 
-// 🔹 Step 2: Updated Card component
 function Card({ step, title, description, image }) {
     return (
         <div className={styles.cardC}>

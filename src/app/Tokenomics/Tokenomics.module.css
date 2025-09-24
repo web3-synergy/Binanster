@@ -1,0 +1,68 @@
+@font-face {
+    font-family: "MyFont";
+    src: url("/fonts/Shadow.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Container for the whole page */
+  .container {
+    background: linear-gradient(to bottom, #000000, #33026B);
+    min-height: 100vh;
+    
+    padding: 1rem; 
+    color: white;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; /* prevent scroll */
+    box-sizing: border-box;
+  }
+  
+  /* Chart wrapper */
+  .wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin: 1rem auto; /* reduce margins */
+    text-align: center;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+  
+  /* Tokenomics title using custom font */
+  .title {
+    font-family: 'MyFont', sans-serif;
+    color: white;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  
+  /* Pie chart canvas responsiveness */
+  .wrapper canvas {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 70vh; /* prevent chart from overflowing */
+  }
+  
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 1.8rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    .wrapper canvas {
+      max-height: 60vh;
+    }
+  }

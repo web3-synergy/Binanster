@@ -4,15 +4,16 @@ import { motion, useAnimation } from 'framer-motion';
 import Image from 'next/image';
 import { RiDashboardFill } from "react-icons/ri";
 
-import { EmojioneMonotoneChains } from '../icons/EmojioneMonotoneChains';
+import { Dust } from '../icons/Dust';
 import { SolarSledgehammerBold } from '../icons/SolarSledgehammerBold';
-import { MdiAlarmLight } from '../icons/MdiAlarmLight';
+import { Vol } from '../icons/Vol';
 import { HeroiconsMagnifyingGlass16Solid } from '../icons/HeroiconsMagnifyingGlass16Solid';
 import { MdiCog } from '../icons/MdiCog';
-import { MdiRecycle } from '../icons/MdiRecycle';
-import  {Overtrading} from '../icons/overtrading';
-import {Post} from '../icons/Post';
+import { Team } from '../icons/Team';
+import  {Boost} from '../icons/Boost';
+import {Tomb} from '../icons/Tomb';
 import {Git} from '../icons/git';
+import { Burn} from '../icons/Burn';
 import styles from './Feature.module.css';
 const featureTabs = [
     {
@@ -28,7 +29,7 @@ const featureTabs = [
         title: "Dust to Rewards",
         label: "Feature Two",
         desc: "Allow users to burn their dust (worthless or low-value tokens) in the Cemetery of Coins platform to receive benefits, such as tokens, platform fees, solanas or other rewards.",
-        icon: <EmojioneMonotoneChains className={styles.icon} />,
+        icon: <Burn className={styles.icon} />,
         img: "/assets/img/landingPage/paper.PNG",
     },
     {
@@ -36,7 +37,7 @@ const featureTabs = [
         title: "Dust and Dreams",
         label: "Feature Three",
         desc: "Turn the act of burning dust tokens into a fun, rewarding experience with a slot machine or lottery system, where users can win spin tickets earned from burning.",
-        icon: <SolarSledgehammerBold className={styles.icon} />,
+        icon: <Dust className={styles.icon} />,
         img: "/assets/img/landingPage/paper.PNG",
     },
     {
@@ -45,7 +46,7 @@ const featureTabs = [
         label: "Feature Four",
         desc: "Provide a premium tool for memecoin project creators to boost their token launches, accessible only to token platform olders who meet a minimum token threshold and time holding.",
 
-        icon: <MdiAlarmLight className={styles.icon} />,
+        icon: <Vol className={styles.icon} />,
         img: "/assets/img/landingPage/paper.PNG",
     },
     {
@@ -54,7 +55,7 @@ const featureTabs = [
         label: "Feature Four",
         desc: "A platform feature where users can access real-time market insights or promote their favorite tokens, powered by cemetery of coins platform.",
 
-        icon: <Overtrading className={styles.icon} />,
+        icon: <Boost className={styles.icon} />,
         img: "/assets/img/landingPage/paper.PNG",
     },
     {
@@ -63,7 +64,7 @@ const featureTabs = [
         label: "Feature Four",
         desc: "A decentralized marketplace where users can hire crypto experts (e.g., developers, marketers, community managers) to support their projects, paid in platform tokens.",
 
-        icon: <MdiRecycle className={styles.icon} />,
+        icon: <Team className={styles.icon} />,
         img: "/assets/img/landingPage/paper.PNG",
     },
     {
@@ -71,7 +72,7 @@ const featureTabs = [
         title: "Tombstone NFTs ",
         label: "Feature Four",
         desc: "Unique NFTs minted when users burn tokens, serving as collectibles or proof of participation. These could have utility, such as unlocking premium features or staking rewards.",
-        icon: <Post className={styles.icon} />,
+        icon: <Tomb className={styles.icon} />,
         img: "/assets/img/landingPage/paper.PNG",
     },
 ];
