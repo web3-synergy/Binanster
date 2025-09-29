@@ -51,7 +51,7 @@ const BelieversTable = () => {
               {believers.map((b) => (
                 <tr key={b.id}>
                   <td>{b.index}</td>
-                  <td>{b.SpookyUsername || "USERNAME"}</td>
+                  <td>{b.spookyUsername || "USERNAME"}</td>
                   <td>{b.walletAddress || "N/A"}</td>
                 </tr>
               ))}
