@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useRef, useState } from "react";
-import { Pixelify_Sans, Red_Hat_Display, Rubik_Pixels } from "next/font/google";
+import { Pixelify_Sans, Red_Hat_Display, Rubik_Pixels, Barlow } from "next/font/google";
 import styles from "./HeroSection.module.css";
 import Link from "next/link";
 import { AkarIconsXFill } from "../icons/AkarIconsXFill";
@@ -27,6 +27,11 @@ const rubikPixels = Rubik_Pixels({
   weight: "400",
   variable: "--font-rubikpixels",
 });
+const barlow = Barlow({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-barlow",
+})
 
 export default function HeroSection() {
   const videoRef = useRef(null);
@@ -109,6 +114,7 @@ export default function HeroSection() {
             alt="cemetery of coins"
             className={styles.heroicon}
           />
+          <h2 className={styles.Bi}>Binanster</h2>
 
 <div className={styles.desktopMenu}>
   <Link href="/believers" className={styles.menuItem}>
@@ -177,12 +183,11 @@ export default function HeroSection() {
           playsInline
           className={styles.heroVideo}
         >
-          <source src="Cemetery.MP4" type="video/mp4" />
+          <source src="Binanster.MP4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
-        {/* Title */}
-        <h1 className={styles.title}>CEMETERY OF COINS</h1>
+        
 
         {/* Countdown */}
         <div className={styles.countdown}>
@@ -195,8 +200,8 @@ export default function HeroSection() {
             ];
             const formatTime = (num) => String(num ?? 0).padStart(2, "0");
             let extraLabel = "—";
-            if (label === "Days") extraLabel = "Countdown";
-            if (label === "Seconds") extraLabel = "Solana";
+            if (label === "Days") extraLabel = "MVP Launch";
+            if (label === "Seconds") extraLabel = "BSC Chain";
 
             return (
               <div key={label} className={styles.timeBox}>
@@ -221,9 +226,9 @@ export default function HeroSection() {
 
         {/* Subtitle */}
         <h1 className={styles.subtitle}>
-          We don’t speak to the dead – We just bury them.
+         The Ultimate Dust Incinerator
         </h1>
-        <p className={styles.ticker}>Contract Address $TICKER</p>
+        <p className={styles.ticker}>Binanster transforms wallet waste into wallet wins</p>
 
         {/* Contract Copy Button */}
         <div className={styles.contractWrapper}>
@@ -235,12 +240,12 @@ export default function HeroSection() {
 
         {/* Socials */}
         <div className={styles.socials}>
-          <p className={styles.name}>Cemetery of Coins</p>
+          <p className={styles.name}>Binanster</p>
           <div className={styles.icons}>
             <Link href="#" target="_blank">
               <Dexscreener className={styles.icon} />
             </Link>
-            <Link href="https://x.com/cemeteryofcoins" target="_blank">
+            <Link href="https://x.com/binanster?s=21" target="_blank">
               <AkarIconsXFill className={styles.icon} />
             </Link>
             <Link href="#" target="_blank">

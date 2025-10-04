@@ -9,9 +9,9 @@
     text-align: center;
 }
 .intro h1{
-    font-family: "MyFont", sans-serif;
-    font-size: 40px;
-    font-weight: 900;
+    font-family: var(--font-barlow);
+    font-size: 52px;
+    font-weight: 600;
     line-height: 97.9px;
     letter-spacing: 0.04em;
     text-align: center;

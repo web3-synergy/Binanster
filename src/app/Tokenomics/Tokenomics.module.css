@@ -7,7 +7,7 @@
   
   /* Container for the whole page */
   .container {
-    background: linear-gradient(to bottom, #000000, #33026B);
+    background-color: black;
     min-height: 100vh;
     
     padding: 1rem; 

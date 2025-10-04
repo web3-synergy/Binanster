@@ -1,31 +1,40 @@
-import { Red_Hat_Display, Lexend } from "next/font/google";
-
+import { Red_Hat_Display, Lexend, Barlow } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-// import Navbar from "@/Components/layouts/Navbar";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 
+// ✅ server metadata
 export const metadata = {
-  title: "Cementry of coins ",
-  description: "Cementry of coins",
+  title: "Binanster",
+  description: "Binanster",
 };
 
-const red_hat_display = Red_Hat_Display({
+// ✅ Google fonts
+const redHatDisplay = Red_Hat_Display({
   subsets: ["latin"],
-  variable: "--font-red_hat_display",
-  display: "block",
+  variable: "--font-red-hat-display",
+  display: "swap",
 });
 
 const lexend = Lexend({
   subsets: ["latin"],
   variable: "--font-lexend",
-  display: "block",
+  display: "swap",
 });
 
+const barlow = Barlow({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-barlow",
+  display: "swap",
+});
+
+// ✅ Root layout
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${red_hat_display.variable} ${lexend.variable}`}>
+      <body
+        className={`${redHatDisplay.variable} ${lexend.variable} ${barlow.variable}`}
+      >
         <AntdRegistry>{children}</AntdRegistry>
       </body>
     </html>

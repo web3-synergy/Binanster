@@ -21,7 +21,7 @@ const aboutus  = [
 
 
 const chart = [
-    { label: 'Pump fun', link: '/' },
+    
     { label: 'Dexscreener', link: '/' },
     
 ];
@@ -63,8 +63,8 @@ export default function Footer() {
                     transition={{ duration: 1, ease: "easeOut" }}
                     viewport={{ once: true }}
                 >
-                    <Image src="/icon.png" alt="Logo" width={70} height={70}  priority />
-                    <p className={styles.name}>CEMENTRY OF COIN</p>
+                    <Image src="/icon.png" alt="Logo" width={30} height={30}  priority />
+                    <p className={styles.name}>Binanster</p>
                 </motion.div>
 
                 <div className='col-6 col-sm-6 col-md-4 ps-4 ps-md-0' >
@@ -180,7 +180,7 @@ function CopyRight() {
             <a href="#" target="_blank" rel="noopener noreferrer">
   <Image src={Dexscreener} alt="Dexscreener" width={24} height={24} className={styles.icon} />
 </a> 
-                <Link href='https://x.com/cemeteryofcoins' target="_blank" ><AkarIconsXFill className={styles.icon} /></Link>
+                <Link href='https://x.com/binanster?s=21' target="_blank" ><AkarIconsXFill className={styles.icon} /></Link>
                 <Link href="#" target="_blank"><BxBxlTelegram className={`${styles.icon}`} /></Link>
                 
 

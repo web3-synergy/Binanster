@@ -6,7 +6,7 @@
 }
 
 .heroSection {
-  background: linear-gradient(to bottom, #000000, #33026B);
+  background-color: black;
   color: #fff;
   
   
@@ -77,10 +77,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 34px;
-  font-weight: bold;
-  font-family: var(--font-rubikpixels);
-  color: rgb(57, 249, 69); /* counter text inside image */
+  font-size: 50px;
+  font-weight: 400px;
+  font-family: var(--font-barlow);
+  color: rgba(250, 211, 22, 1); /* counter text inside image */
 }
 
 .timeBox p {
@@ -94,25 +94,26 @@
 }
 
 .subtitle {
-  font-size: 20px;
+  font-size: 52px;
   margin: 20px auto 35px;
-  max-width: 600px;
+  
   color: rgb(255, 255, 255);
   opacity: 0.9;
-  font-family: var(--font-pixelify);
+  font-family: var(--font-redhat);
   letter-spacing: 0.6px;
   height: 40px;
   font-weight: 600;
+  
 }
 .ticker {
-  font-size: 12px;
+  font-size: 16px;
   max-width: 600px;
   color: rgb(255, 255, 255);
   opacity: 0.9;
   font-family: var(--font-redhat);
   letter-spacing: 0.6px;
   margin: 20px auto 35px;
-  font-weight: 361px;
+  font-weight: 400px;
   margin-bottom: 20px;
   margin-top: 10px;
 }
@@ -147,8 +148,9 @@
 
 .name {
   font-size: 18px;
-  font-weight: 600;
-  color: white; /* neon green */
+  font-weight: 500;
+  font-family: var(--font-redhat);
+  color: rgba(250, 211, 22, 1); /* neon green */
   
 }
 
@@ -172,13 +174,13 @@
        /* sticks to the top on scroll */
   top: 0;
   left: 0;
-  width: 1100px;              /* full width across screen */
+  width: 1160px;              /* full width across screen */
   height: 60px;
   padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0, 255, 0, 0.18); /* translucent green bar */
+  background: rgba(250, 211, 22, 1); /* translucent green bar */
   
   z-index: 1000;
   border-radius: 10px;  
@@ -187,9 +189,10 @@
   margin-top: 20px;        /* stays above other content */
 }
 .heroicon {
-  height: 46px;
-  width: 46px;
+  height: 30px;
+  width: 30px;
   cursor: pointer;
+  border-radius: 100px;
 }
 .menuButton:hover {
   color :rgb(57, 249, 69);
@@ -199,19 +202,16 @@
   padding: 10px 5px;
   font-size: 15px;
   font-weight: 600;
-  border: 1px solid #39F945;
+  
   border-radius: 6px;
   background: transparent;
   color: white;
   cursor: pointer;
   transition: all 0.3s ease;
+  background-color: rgba(0, 0, 0, 1);
 }
 
-.minbutton:hover {
-  background: #39F945;
-  color: black;
-  
-}
+
 /* Desktop Menu */
 .desktopMenu {
   display: flex;
@@ -273,6 +273,14 @@
   opacity: 0;
   animation: fadeIn 0.3s forwards;
 }
+.Bi{
+  color: black;
+  font-style: bold;
+  font-weight: 700;
+  font-size: 23.53px;
+  padding-right: 460px;
+  
+}
 
 .mobileMenu {
   position: fixed;
@@ -298,7 +306,7 @@
 @keyframes slideIn { from { right: -60%; } to { right: 0; } }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 .line{
-  border: 0.6px solid #39F945;
+  border: 0.6px solid rgba(250, 211, 22, 1);
   border-radius: 20px;
   margin-top: 7px;
   margin-bottom: 15px;
