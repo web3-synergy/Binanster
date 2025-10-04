@@ -194,9 +194,7 @@
   cursor: pointer;
   border-radius: 100px;
 }
-.menuButton:hover {
-  color :rgb(57, 249, 69);
-}
+
 
 .minbutton {
   padding: 10px 5px;
@@ -246,7 +244,8 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: white;
+  color: black;
+  
 }
 .menuButton{
   display: none;
@@ -392,10 +391,11 @@
   }
 
   .timeValue {
-    font-size: 34px;
-    font-weight: bold;
-    font-family: var(--font-rubikpixels);
-    color: rgb(57, 249, 69); /* counter text inside image */
+     
+    font-size: 50px;
+   font-weight: 400px;
+  font-family: var(--font-barlow);
+  color: rgba(250, 211, 22, 1); /* counter text inside image */
   }
 
   .timeBox p {
@@ -433,7 +433,7 @@
   }
 
   .heroicon {
-    height: 46px;
+    height: 30px;
   }
 
   .minbutton {
@@ -454,6 +454,17 @@
     
     cursor: pointer;
   }
+  .ticker{
+    font-size: 10px;
+  }
+  .line {
+    width: 100%;
+  }
+  .Bi{
+    
+    padding-left: 5px;
+    padding-right: 190px;
+  }
 }
 
 /* 📱 Smaller screens (max 480px) */
@@ -472,10 +483,11 @@
   }
 
   .timeValue {
-    font-size: 30px;
-    font-weight: bold;
-    font-family: var(--font-rubikpixels);
-    color: rgb(57, 249, 69); /* counter text inside image */
+    
+    font-size: 50px;
+   font-weight: 400px;
+  font-family: var(--font-barlow);
+  color: rgba(250, 211, 22, 1); /* counter text inside image */
   }
 
   .timeBox p {
@@ -487,5 +499,15 @@
   .heroButton {
     font-size: 0.6rem;
     padding: 10px 16px;
+  }
+  .ticker{
+    font-size: 10px;
+  }
+  .line {
+    width: 100%;
+  }
+  .Bi{
+    padding-left: 5px;
+    padding-right: 190px;
   }
 }
