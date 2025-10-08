@@ -18,63 +18,53 @@ import styles from './Feature.module.css';
 const featureTabs = [
     {
         id: 1,
-        title: "The First Influencer Economy",
-        label: "Feature One",
-        desc: "We believe memes are the purest form of digital influence. Binanster transforms meme energy into real financial power — creating the world’s first ecosystem where culture becomes capital, and every holder is both a creator and an influencer.",
-        icon: <Whitepaper  />,
+        title: "The Meme That Started It All",
+        desc: "Every empire begins with a meme. Binanster celebrates the spark that made the internet laugh — and never stopped echoing through crypto history.",
+        icon: <Whitepaper />, // 📜 Origin / Story
         img: "/assets/img/landingPage/paper.PNG",
-    },
-    {
+      },
+      {
         id: 2,
-        title: "From Memes to Movement",
-        label: "Feature Two",
-        desc: "The First Influencer Meme is not just a joke — it’s a revolution. We’re building a DeFi-powered movement that rewards creativity, virality, and community leadership. Because influence should pay back the people, not the platforms.",
-        icon: <Flag  />,
+        title: "From Joke to Movement",
+        desc: "What began as pure internet chaos became a culture. The joke caught fire — and now, it’s a worldwide meme revolution powered by believers.",
+        icon: <Flag />, // 🚩 Movement / Rebellion
         img: "/assets/img/landingPage/paper.PNG",
-    },
-    {
+      },
+      {
         id: 3,
-        title: "Reviving the Value of Dust",
-        label: "Feature Three",
-        desc: "Just as the first influencers turned simple trends into empires, Binanster reclaims forgotten dust and worthless tokens, transforming them into yield-generating assets. Nothing in this space should be wasted — not even a meme.",
-        icon: <Slot  />,
+        title: "Powered by the People",
+        desc: "No founders. No rulers. Just the crowd. Every holder is part of the meme machine — where virality decides value and the internet runs the show.",
+        icon: <Aster />, // ⭐ People Power / Energy
         img: "/assets/img/landingPage/paper.PNG",
-    },
-    {
+      },
+      {
         id: 4,
-        title: "Decentralized Influence",
-        label: "Feature Four",
-        desc: "In the old world, influence was centralized — owned by brands, media, and algorithms. Binanster flips that. Our meme-powered DeFi protocol makes influence a shared economy, where your wallet is your voice and your culture has value.",
-
-        icon: <Card  />,
+        title: "Meme the System",
+        desc: "Forget fighting the system — we’ll just meme it until it breaks. Humor is our weapon, and the blockchain is our stage.",
+        icon: <Card />, // 🧱 Rebellion / Disruption
         img: "/assets/img/landingPage/paper.PNG",
-    },
-    {
+      },
+      {
         id: 5,
-        title: "Meme-Fi: Where Culture Meets Capital",
-        label: "Feature Four",
-        desc: "The next generation of DeFi is not just about numbers — it’s about narratives. Binanster merges the power of memes and financial systems to build Meme-Fi: an economy that runs on community conviction and digital storytelling.",
-
-        icon: <Aster  />,
+        title: "Laugh to Earn",
+        desc: "No charts, no stress — just laughs, vibes, and viral wins. In the Binanster world, comedy is currency and memes are market movers.",
+        icon: <Slot />, // 🎰 Chaos / Luck / Fun
         img: "/assets/img/landingPage/paper.PNG",
-    },
-    {
+      },
+      {
         id: 6,
-        title: "From Chaos to Creation",
-        label: "Feature Four",
-        desc: "The meme market may look chaotic, but from chaos comes innovation. Binanster harnesses the volatility of meme coins and channels it into structured, rewarding DeFi utilities that empower every user to create and grow wealth.",
-
-        icon: <Solar  />,
+        title: "For the Meme Lords and Dreamers",
+        desc: "For the OGs who made memes an art form — and the dreamers who turned them into movements. The throne is open to all who laugh the loudest.",
+        icon: <Solar />, // 🌞 Creativity / Dreamers
         img: "/assets/img/landingPage/paper.PNG",
-    },
-    {
+      },
+      {
         id: 7,
-        title: "The Origin of Digital Influence ",
-        label: "Feature Four",
-        desc: "The First Influencer Meme marks a new era — one where influence, humor, and finance fuse into one unstoppable digital force. Binanster is the birthplace of this hybrid culture, leading the charge toward a more playful, profitable web3 world.",
-        icon: <Wallet />,
+        title: "The People’s Meme Coin",
+        desc: "No gates. No kings. No corporate suits. Just the internet’s coin — owned by the people, powered by memes, and ruled by fun.",
+        icon: <Wallet />, // 👛 Accessibility / Community
         img: "/assets/img/landingPage/paper.PNG",
-    },
+      }
 ];
 
 export default function Feature() {
