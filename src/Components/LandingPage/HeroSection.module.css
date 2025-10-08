@@ -318,8 +318,9 @@
 .line{
   border: 0.6px solid rgba(250, 211, 22, 1);
   border-radius: 20px;
-  margin-top: 7px;
-  margin-bottom: 15px;
+  width: 100%; 
+  max-width: 2000px; 
+  margin: 10px auto;
   
 
 }
@@ -443,9 +444,7 @@
     justify-content: space-between;
   }
 
-  .heroicon {
-    height: 46px;
-  }
+  
 
   .minbutton {
     font-size: 15px;
