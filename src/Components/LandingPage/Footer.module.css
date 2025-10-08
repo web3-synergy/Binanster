@@ -18,7 +18,7 @@
    
 }
 .CopyRight p{
-    font-family: var(--font-lexend) ;
+    font-family: var(--font-red-hat-display) ;
     font-size: 13px;
     font-weight: 400;
     line-height: 20px;
@@ -44,7 +44,7 @@
   color: #0F1525;
   font-size: 15px;
   font-weight: 500;
-  font-family: var(--font-lexend) ;
+  font-family: var(--font-red-hat-display) ;
   text-align: center;
 }
 .btn:hover{
@@ -73,7 +73,7 @@
     text-align: left;
 }
 .footerLinks p{
-    font-family: var(--font-lexend) ;
+    font-family: var(--font-red-hat-display) ;
     font-size: 18px;
     font-weight: 400;
     line-height: 20px;
@@ -114,7 +114,7 @@
 .contract-address h1{
     color: #FFF;
     white-space: nowrap;
-    font-family: var(--font-lexend) ;
+    font-family: var(--font-red-hat-display) ;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -126,7 +126,7 @@
 
     color: #FFF;
     text-align: right;
-    font-family: var(--font-lexend) ;
+    font-family: var(--font-red-hat-display) ;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;

@@ -112,11 +112,11 @@ export default function HeroSection() {
          
         <div className={styles.heroContainer}>
   <img
-    src="icon.png"
+    src="Frame.png"
     alt="cemetery of coins"
     className={styles.heroicon}
   />
-  <h2 className={styles.Bi}>Binanster</h2>
+  
 </div>
           
 
