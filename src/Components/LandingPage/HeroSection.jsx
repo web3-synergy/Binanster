@@ -109,70 +109,19 @@ export default function HeroSection() {
       <div className={styles.line}>
         {/* Topbar */}
         <div className={styles.topbar}>
-          <img
-            src="icon.png"
-            alt="cemetery of coins"
-            className={styles.heroicon}
-          />
-          <h2 className={styles.Bi}>Binanster</h2>
-
-<div className={styles.desktopMenu}>
-  <Link href="/believers" className={styles.menuItem}>
-    <Believers className={styles.menuicon} aria-label="Believer" />
-    Believers
-  </Link>
-
-  <Link href="/Tokenomics" className={styles.menuItem}>
-    <Tokenomics className={styles.menuicon} aria-label="Tokenomics" />
-    Tokenomics
-  </Link>
-
-  <span className={`${styles.menuItem} ${styles.disabled}`}>Dapp Soon</span>
-
-  <button className={styles.minbutton}>Join Whitelist</button>
+         
+        <div className={styles.heroContainer}>
+  <img
+    src="icon.png"
+    alt="cemetery of coins"
+    className={styles.heroicon}
+  />
+  <h2 className={styles.Bi}>Binanster</h2>
 </div>
+          
 
-          {/* Mobile Menu Button */}
-          <button className={styles.menuButton} onClick={() => setMenuOpen(!menuOpen)}>
-            ☰
-          </button>
+ 
 
-           {/* Mobile Menu Overlay */}
-{menuOpen && (
-  <>
-    <div
-      className={styles.mobileMenuOverlay}
-      onClick={() => setMenuOpen(false)}
-    ></div>
-
-    <div className={styles.mobileMenu}>
-      {/* Top row: dApp Soon left, Join Whitelist right */}
-      <div className={styles.mobileTopRow}>
-        <span className={`${styles.menuItem} ${styles.disabled}`}>dApp Soon</span>
-        <button className={styles.minbutton}>Join Whitelist</button>
-      </div>
-
-      {/* Links below */}
-      <div className={styles.mobilelink}>
-      <Link
-        href="/believers"
-        className={styles.menuItem}
-        onClick={() => setMenuOpen(false)}
-      >
-        <Believers className={styles.menuicon} aria-label="Believer" /> Believers
-      </Link>
-
-      <Link
-        href="/Tokenomics"
-        className={styles.menuItem}
-        onClick={() => setMenuOpen(false)}
-      >
-        <Tokenomics className={styles.menuicon} aria-label="Tokenomics" /> Tokenomics
-      </Link>
-      </div>
-    </div>
-  </>
-)}
 </div>
         {/* Background Video */}
         <video

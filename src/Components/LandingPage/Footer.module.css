@@ -28,9 +28,9 @@
 .name{
     font-family: var(--font-barlow);
     position: absolute;
-    top: 20px;
+    top: 30px;
     left: 70px;
-    font-size: 52px;
+    font-size: 40px;
     font-weight: 600;
     color: white;
 }
@@ -79,6 +79,26 @@
     line-height: 20px;
     text-align: left;
 
+}
+.bnb {
+    color: white;
+    display: flex;
+    flex-direction: row;       /* default: row for desktop */
+    justify-content: center;
+    align-items: center;       /* vertical alignment in row */
+    text-align: center;
+    
+    gap: 25px;                 /* spacing between items */
+}
+
+/* Text styling */
+.image{
+    width: 250px;
+    height: 100px;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(76%) sepia(92%) saturate(700%) hue-rotate(1deg) brightness(102%) contrast(101%);
+    margin-bottom: 10px;
+    margin-left: 30px;
 }
 .contract-address{
     background: rgba(255, 255, 255, 0.10);
@@ -137,6 +157,16 @@
     }
     .mobileBreak{
         display: inline;
+    }
+    .bnb {
+        flex-direction: row; 
+        margin: 0,
+                   
+    }
+
+    .chain {
+        font-size: 24px; 
+               
     }
 }
 

@@ -70,6 +70,7 @@
 .timeIcon {
   width: 91.25px;   /* adjust icon size */
   height: 61.20px;
+  
 }
 
 .timeValue {
@@ -193,7 +194,19 @@
   width: 30px;
   cursor: pointer;
   border-radius: 100px;
+  
+  
 }
+.heroContainer {
+  display: flex;
+  flex-direction: row; 
+  justify-content: center; 
+  align-items: center; 
+  
+  text-align: center;
+}
+
+
 
 
 .minbutton {
