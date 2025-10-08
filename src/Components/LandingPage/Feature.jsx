@@ -19,6 +19,10 @@ import { Meme } from '../icons/meme';
 import { Crown } from '../icons/crown';
 import { Slotmachine } from '../icons/slot-machine';
 import { Sun } from '../icons/sun';
+import { Coin } from '../icons/coin';
+import { People } from '../icons/people';
+import { Palette } from '../icons/bush';
+import { Internet } from '../icons/internet';
 const featureTabs = [
     {
         id: 1,
@@ -38,14 +42,14 @@ const featureTabs = [
         id: 3,
         title: "Powered by Creators",
         desc: "This is not just a coin — it’s a creator movement. Every holder becomes an influencer, every meme a message, and every post a piece of the brand.",
-        icon: <Aster />, // ⭐ Creator energy — shining stars of the ecosystem
+        icon: <Palette />, // ⭐ Creator energy — shining stars of the ecosystem
         img: "/assets/img/landingPage/paper.PNG",
       },
       {
         id: 4,
         title: "Influence the System",
         desc: "We don’t fight the algorithm — we own it. Binanster flips the digital economy by rewarding engagement and virality directly to the people who create it.",
-        icon: <Crown/>, // 💳 Power / system — flipping traditional influence structures
+        icon:  <Sun />,// 💳 Power / system — flipping traditional influence structures
         img: "/assets/img/landingPage/paper.PNG",
       },
       {
@@ -59,14 +63,14 @@ const featureTabs = [
         id: 6,
         title: "For the Meme Lords and Influencers",
         desc: "Binanster belongs to the ones who move culture — the creators, meme lords, and dreamers who make the internet laugh, think, and trend.",
-        icon: <Sun />, // 🌞 Represents shining personalities and influence
+        icon: <People/>, // 🌞 Represents shining personalities and influence
         img: "/assets/img/landingPage/paper.PNG",
       },
       {
         id: 7,
         title: "The People’s Influence Coin",
         desc: "No managers, no middlemen — just pure influence power in the hands of the crowd. Binanster is the people’s brand, built by the internet, for the internet.",
-        icon: <Wallet />, // 👛 Community ownership
+        icon: <Internet />, // 👛 Community ownership
         img: "/assets/img/landingPage/paper.PNG",
       }
 ];
