@@ -160,7 +160,10 @@
     }
     .bnb {
         flex-direction: row; 
-        margin: 0,
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-right: 50px;
                    
     }
 

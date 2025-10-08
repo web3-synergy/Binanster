@@ -18,51 +18,51 @@ import styles from './Feature.module.css';
 const featureTabs = [
     {
         id: 1,
-        title: "The Meme That Started It All",
-        desc: "Every empire begins with a meme. Binanster celebrates the spark that made the internet laugh — and never stopped echoing through crypto history.",
-        icon: <Whitepaper />, // 📜 Origin / Story
+        title: "The Meme That Started the Influence",
+        desc: "Every viral empire starts with one spark. Binanster celebrates the first creators who turned memes into movements — where every post, every laugh, and every share builds power.",
+        icon: <Whitepaper />, // 📜 Represents the origin or manifesto of the influencer era
         img: "/assets/img/landingPage/paper.PNG",
       },
       {
         id: 2,
-        title: "From Joke to Movement",
-        desc: "What began as pure internet chaos became a culture. The joke caught fire — and now, it’s a worldwide meme revolution powered by believers.",
-        icon: <Flag />, // 🚩 Movement / Rebellion
+        title: "From Joke to Brand",
+        desc: "Influence begins with humor — and evolves into legacy. What started as memes has become an unstoppable creator economy driven by community clout.",
+        icon: <Flag />, // 🚩 Symbol of evolution — from humor to brand identity
         img: "/assets/img/landingPage/paper.PNG",
       },
       {
         id: 3,
-        title: "Powered by the People",
-        desc: "No founders. No rulers. Just the crowd. Every holder is part of the meme machine — where virality decides value and the internet runs the show.",
-        icon: <Aster />, // ⭐ People Power / Energy
+        title: "Powered by Creators",
+        desc: "This is not just a coin — it’s a creator movement. Every holder becomes an influencer, every meme a message, and every post a piece of the brand.",
+        icon: <Aster />, // ⭐ Creator energy — shining stars of the ecosystem
         img: "/assets/img/landingPage/paper.PNG",
       },
       {
         id: 4,
-        title: "Meme the System",
-        desc: "Forget fighting the system — we’ll just meme it until it breaks. Humor is our weapon, and the blockchain is our stage.",
-        icon: <Card />, // 🧱 Rebellion / Disruption
+        title: "Influence the System",
+        desc: "We don’t fight the algorithm — we own it. Binanster flips the digital economy by rewarding engagement and virality directly to the people who create it.",
+        icon: <Card />, // 💳 Power / system — flipping traditional influence structures
         img: "/assets/img/landingPage/paper.PNG",
       },
       {
         id: 5,
-        title: "Laugh to Earn",
-        desc: "No charts, no stress — just laughs, vibes, and viral wins. In the Binanster world, comedy is currency and memes are market movers.",
-        icon: <Slot />, // 🎰 Chaos / Luck / Fun
+        title: "Engage to Earn",
+        desc: "Likes, retweets, and reposts now mean more. In the Binanster world, social activity fuels growth — where engagement turns into influence, and influence into value.",
+        icon: <Slot />, // 🎰 Interaction / engagement mechanic
         img: "/assets/img/landingPage/paper.PNG",
       },
       {
         id: 6,
-        title: "For the Meme Lords and Dreamers",
-        desc: "For the OGs who made memes an art form — and the dreamers who turned them into movements. The throne is open to all who laugh the loudest.",
-        icon: <Solar />, // 🌞 Creativity / Dreamers
+        title: "For the Meme Lords and Influencers",
+        desc: "Binanster belongs to the ones who move culture — the creators, meme lords, and dreamers who make the internet laugh, think, and trend.",
+        icon: <Solar />, // 🌞 Represents shining personalities and influence
         img: "/assets/img/landingPage/paper.PNG",
       },
       {
         id: 7,
-        title: "The People’s Meme Coin",
-        desc: "No gates. No kings. No corporate suits. Just the internet’s coin — owned by the people, powered by memes, and ruled by fun.",
-        icon: <Wallet />, // 👛 Accessibility / Community
+        title: "The People’s Influence Coin",
+        desc: "No managers, no middlemen — just pure influence power in the hands of the crowd. Binanster is the people’s brand, built by the internet, for the internet.",
+        icon: <Wallet />, // 👛 Community ownership
         img: "/assets/img/landingPage/paper.PNG",
       }
 ];

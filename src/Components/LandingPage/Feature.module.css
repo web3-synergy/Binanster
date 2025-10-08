@@ -6,7 +6,7 @@
 }
 .main {
     border: 1px solid rgba(250, 211, 22, 1);
-    background: #FFFFFF0A;
+    background: black;
     border-radius: 10px;
     z-index: 99;
   }

@@ -54,6 +54,8 @@
   font-weight: 700;
   font-size: 23.53px;
   padding-right: 460px;
+  font-family: var(--font-devanagari);
+  text-shadow: 4px  rgba(0, 0, 0, 0.25);
   
 }
 
@@ -207,8 +209,7 @@
   box-sizing: border-box;
 }
 .heroicon {
-  height: 46px;
-  width: 46px;
+  
   cursor: pointer;
 }
 .menuButton:hover {
