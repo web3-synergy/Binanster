@@ -66,8 +66,12 @@ export default function Footer() {
                     transition={{ duration: 1, ease: "easeOut" }}
                     viewport={{ once: true }}
                 >
-                    <Image src="/icon.png" alt="Logo" width={30} height={30}  priority />
-                    <p className={styles.name}>Binanster</p>
+                     <img
+    src="Frame1.png"
+    alt="cemetery of coins"
+    
+  />
+                    
                 </motion.div>
 
                 <div className='col-6 col-sm-6 col-md-4 ps-4 ps-md-0' >
