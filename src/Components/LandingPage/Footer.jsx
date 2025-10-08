@@ -189,7 +189,7 @@ function CopyRight() {
             <a href="#" target="_blank" rel="noopener noreferrer">
               <Image src={Dexscreener} alt="Dexscreener" width={24} height={24} className={styles.icon} />
             </a>
-            <Link href='https://x.com/cemeteryofcoins' target="_blank">
+            <Link href='https://x.com/binanster?s=21' target="_blank">
               <AkarIconsXFill className={styles.icon} />
             </Link>
             <Link href="#" target="_blank">
