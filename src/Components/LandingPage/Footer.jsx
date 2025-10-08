@@ -17,7 +17,7 @@ import { Four } from "../icons/Four";
 import { Asterlogo } from '../icons/Asterlogo';
 
 const aboutus  = [
-    { label: 'Twitter', link: 'https://x.com/cemeteryofcoins' },
+    { label: 'Twitter', link: 'https://x.com/binanster?s=21' },
     { label: 'Telegram Group', link: '/' },
     
 ];
