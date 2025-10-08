@@ -12,7 +12,7 @@ export const metadata = {
 const redHatDisplay = Red_Hat_Display({
   subsets: ["latin"],
   variable: "--font-redhat",
-  display: "swap",
+  
 });
 
 const lexend = Lexend({

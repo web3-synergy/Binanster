@@ -15,12 +15,16 @@ import {Wallet} from '../icons/Wallet';
 import {Whitepaper} from '../icons/Whitepaper';
 import { Flag} from '../icons/Flag';
 import styles from './Feature.module.css';
+import { Meme } from '../icons/meme';
+import { Crown } from '../icons/crown';
+import { Slotmachine } from '../icons/slot-machine';
+import { Sun } from '../icons/sun';
 const featureTabs = [
     {
         id: 1,
         title: "The Meme That Started the Influence",
         desc: "Every viral empire starts with one spark. Binanster celebrates the first creators who turned memes into movements — where every post, every laugh, and every share builds power.",
-        icon: <Whitepaper />, // 📜 Represents the origin or manifesto of the influencer era
+        icon: <Meme />, 
         img: "/assets/img/landingPage/paper.PNG",
       },
       {
@@ -41,21 +45,21 @@ const featureTabs = [
         id: 4,
         title: "Influence the System",
         desc: "We don’t fight the algorithm — we own it. Binanster flips the digital economy by rewarding engagement and virality directly to the people who create it.",
-        icon: <Card />, // 💳 Power / system — flipping traditional influence structures
+        icon: <Crown/>, // 💳 Power / system — flipping traditional influence structures
         img: "/assets/img/landingPage/paper.PNG",
       },
       {
         id: 5,
         title: "Engage to Earn",
         desc: "Likes, retweets, and reposts now mean more. In the Binanster world, social activity fuels growth — where engagement turns into influence, and influence into value.",
-        icon: <Slot />, // 🎰 Interaction / engagement mechanic
+        icon: <Slotmachine />, // 🎰 Interaction / engagement mechanic
         img: "/assets/img/landingPage/paper.PNG",
       },
       {
         id: 6,
         title: "For the Meme Lords and Influencers",
         desc: "Binanster belongs to the ones who move culture — the creators, meme lords, and dreamers who make the internet laugh, think, and trend.",
-        icon: <Solar />, // 🌞 Represents shining personalities and influence
+        icon: <Sun />, // 🌞 Represents shining personalities and influence
         img: "/assets/img/landingPage/paper.PNG",
       },
       {
