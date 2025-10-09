@@ -23,6 +23,8 @@ import { Coin } from '../icons/coin';
 import { People } from '../icons/people';
 import { Palette } from '../icons/bush';
 import { Internet } from '../icons/internet';
+import { Laboratory } from '../icons/lab';
+import { Brain } from '../icons/brain';
 const featureTabs = [
     {
         id: 1,
@@ -35,7 +37,7 @@ const featureTabs = [
         id: 2,
         title: "From Joke to Brand",
         desc: "Influence begins with humor — and evolves into legacy. What started as memes has become an unstoppable creator economy driven by community clout.",
-        icon: <Flag />, // 🚩 Symbol of evolution — from humor to brand identity
+        icon: <Laboratory />, // 🚩 Symbol of evolution — from humor to brand identity
         img: "/assets/img/landingPage/paper.PNG",
       },
       {
@@ -49,7 +51,7 @@ const featureTabs = [
         id: 4,
         title: "Influence the System",
         desc: "We don’t fight the algorithm — we own it. Binanster flips the digital economy by rewarding engagement and virality directly to the people who create it.",
-        icon:  <Sun />,// 💳 Power / system — flipping traditional influence structures
+        icon:  <Brain />,// 💳 Power / system — flipping traditional influence structures
         img: "/assets/img/landingPage/paper.PNG",
       },
       {
@@ -127,7 +129,7 @@ export default function Feature() {
             {/* ✅ Section Title */}
           <div className={styles.sectionHeader}>
             <h2>OUR VISION</h2>
-            <p></p>
+            
           </div>
             <div className={styles.main}>
             <div className='px-2 px-sm-3 pt-4 pb-2 pb-sm-4'>

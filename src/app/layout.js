@@ -1,4 +1,4 @@
-import { Red_Hat_Display, Lexend, Barlow, Noto_Sans_Devanagari } from "next/font/google";
+import { Red_Hat_Display, Lexend, Barlow, Noto_Sans_Devanagari, Lato} from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 
@@ -23,7 +23,7 @@ const lexend = Lexend({
 
 const barlow = Barlow({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300","400", "500", "600", "700"],
   variable: "--font-barlow",
   display: "swap",
 });
@@ -31,6 +31,11 @@ const notoDevanagari = Noto_Sans_Devanagari({
   subsets: ["devanagari"],
   weight: ["400", "700"],
   variable: "--font-devanagari",
+});
+const lato = Lato({
+  subsets: ["latin"],
+  weight: ["400", "700"], 
+  variable: "--font-lato",
 });
 
 // ✅ Root layout

@@ -24,7 +24,7 @@
   font-size: 13px;
   color: #00ff00;
   margin-bottom: 6px;
-  font-family: var(--font-redhat);
+  font-family: var(--font-lato);
   min-height: 18px; /* keep equal height */
 }
 
@@ -40,6 +40,7 @@
  
   
 }
+
 .heroContainer {
   display: flex;
   flex-direction: row; 
@@ -99,7 +100,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 34px;
+  font-size: 30px;
   font-weight: bold;
   font-family: var(--font-barlow);
   color: rgba(250, 211, 22, 1); 
@@ -111,7 +112,7 @@
   color: white;
   opacity: 0.9;
   letter-spacing: 1px;
-  font-family: var(--font-redhat);
+  font-family: var(--font-lato);
 
 }
 
@@ -121,7 +122,7 @@
   max-width: 600px;
   color: rgb(255, 255, 255);
   opacity: 0.9;
-  font-family: var(--font-redhat);
+  font-family: var(--font-lato);
 
   letter-spacing: 0.6px;
   height: 40px;
@@ -132,7 +133,7 @@
   max-width: 600px;
   color: rgb(255, 255, 255);
   opacity: 0.9;
-  font-family: var(--font-redhat);
+  font-family: var(--font-lato);
   letter-spacing: 0.6px;
   margin: 20px auto 35px;
   font-weight: 361px;
@@ -171,7 +172,7 @@
 .name {
   font-size: 18px;
   font-weight: 500;
-  font-family: var(--font-redhat);
+  font-family: var(--font-lato);
   color: rgba(250, 211, 22, 1); /* neon green */
   
 }
@@ -404,9 +405,9 @@
   }
 
   .timeValue {
-    font-size: 34px;
+    font-size: 30px;
     font-weight: bold;
-    font-family: var(--font-rubikpixels);
+    font-family: var(--font-barlow);
     color: rgb(57, 249, 69); /* counter text inside image */
   }
 
@@ -484,7 +485,7 @@
   .timeValue {
     
     font-size: 50px;
-   font-weight: 400px;
+   font-weight: 300px;
   font-family: var(--font-barlow);
   color: rgba(250, 211, 22, 1); /* counter text inside image */
   }

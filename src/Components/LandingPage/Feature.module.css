@@ -27,7 +27,7 @@
   
   .details p {
     color: #FFFFFF;
-    font-family: var(--font-lexend);
+    font-family: var(--font-lato);
     font-size: 16px; /* ✅ fixed unit */
     font-weight: 300;
     line-height: 20px;
@@ -57,7 +57,7 @@
     padding: 16px;
     background: transparent;
     width: 100%;
-    font-family: var(--font-lexend);
+    font-family: var(--font-lato);
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -99,7 +99,7 @@
   }
   
   .sectionHeader h2 {
-    font-size: 52px;
+    font-size: 45px;
     font-weight: 600;
     color: #fff; /* adjust to match theme */
     margin-bottom: 0.5rem;

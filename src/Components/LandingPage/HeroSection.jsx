@@ -1,3 +1,5 @@
+
+
 'use client';
 import React, { useEffect, useRef, useState } from "react";
 import { Pixelify_Sans, Red_Hat_Display, Rubik_Pixels, Barlow } from "next/font/google";
@@ -125,16 +127,30 @@ export default function HeroSection() {
 </div>
         {/* Background Video */}
         <video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          className={styles.heroVideo}
-        >
-          <source src="Binanster.MP4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+  ref={videoRef}
+  autoPlay
+  muted
+  loop
+  playsInline
+  className={styles.heroVideo}
+  onClick={() => {
+    if (videoRef.current.paused) {
+      videoRef.current.play();
+    } else {
+      videoRef.current.pause();
+    }
+  }}
+>
+  <source src="Binanster.MP4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+        
+
+
+
+        
+
+
 
         
 
@@ -210,3 +226,4 @@ export default function HeroSection() {
   );
 
 }
+
