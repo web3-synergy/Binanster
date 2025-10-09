@@ -8,7 +8,7 @@
 .heroSection {
   background-color: black;
   color: #fff;
-  
+  font-family: var(--font-lato);
   
   text-align: center;
   position: relative;
@@ -112,7 +112,7 @@
   color: white;
   opacity: 0.9;
   letter-spacing: 1px;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-lato);
 
 }
 
@@ -122,7 +122,7 @@
   max-width: 600px;
   color: rgb(255, 255, 255);
   opacity: 0.9;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-lato);
 
   letter-spacing: 0.6px;
   height: 40px;
@@ -133,7 +133,7 @@
   max-width: 600px;
   color: rgb(255, 255, 255);
   opacity: 0.9;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-lato);
   letter-spacing: 0.6px;
   margin: 20px auto 35px;
   font-weight: 361px;
@@ -172,7 +172,7 @@
 .name {
   font-size: 18px;
   font-weight: 500;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-lato);
   color: rgba(250, 211, 22, 1); /* neon green */
   
 }
@@ -342,6 +342,7 @@
   border-radius: 20px;
   padding: 10px 20px;
   font-size: 14px;
+  font-family: var(--font-lato);
   font-weight: 600;
   cursor: pointer;
   transition: background 0.3s;

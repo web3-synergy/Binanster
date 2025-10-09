@@ -198,7 +198,7 @@ export default function HeroSection() {
         <h1 className={styles.subtitle}>
          Where Influence Meets The Blockchain
         </h1>
-        <p className={styles.ticker}>Turn clout into currency—the meme coin powered by the people who move culture</p>
+        <p className={styles.ticker}>The meme coin powered by the people who move culture</p>
 
         {/* Contract Copy Button */}
         <div className={styles.contractWrapper}>
