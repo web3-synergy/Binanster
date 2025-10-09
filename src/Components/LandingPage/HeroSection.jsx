@@ -2,7 +2,7 @@
 
 'use client';
 import React, { useEffect, useRef, useState } from "react";
-import { Pixelify_Sans, Red_Hat_Display, Rubik_Pixels, Barlow } from "next/font/google";
+import { Pixelify_Sans, Red_Hat_Display, Rubik_Pixels, Barlow, Lato as LatoFont } from "next/font/google";
 import styles from "./HeroSection.module.css";
 import Link from "next/link";
 import { AkarIconsXFill } from "../icons/AkarIconsXFill";
@@ -34,6 +34,11 @@ const barlow = Barlow({
   weight: ["400", "500", "600", "700"],
   variable: "--font-barlow",
 })
+const lato = LatoFont({
+  subsets: ["latin"],
+  weight: ["400", "700"], 
+  variable: "--font-lato",
+});
 
 export default function HeroSection() {
   const videoRef = useRef(null);
@@ -191,9 +196,9 @@ export default function HeroSection() {
 
         {/* Subtitle */}
         <h1 className={styles.subtitle}>
-         The Ultimate Dust Incinerator
+         Where Influence Meets The Blockchain
         </h1>
-        <p className={styles.ticker}>Binanster transforms wallet waste into wallet wins</p>
+        <p className={styles.ticker}>Turn clout into currency—the meme coin powered by the people who move culture</p>
 
         {/* Contract Copy Button */}
         <div className={styles.contractWrapper}>

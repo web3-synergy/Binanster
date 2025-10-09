@@ -11,7 +11,7 @@ import Image from 'next/image';
 import { MdContentCopy } from "react-icons/md";
 import { Button, message } from 'antd';
 import { Paper} from "../icons/paper";
-import { Pixelify_Sans, Rubik_Pixels } from "next/font/google";
+import { Pixelify_Sans, Rubik_Pixels, Lato } from "next/font/google";
 import { Bnb } from '../icons/bnb';
 import { Four } from "../icons/Four";
 import { Asterlogo } from '../icons/Asterlogo';
@@ -37,6 +37,11 @@ const rubikPixels = Rubik_Pixels({
     subsets: ["latin"],
     weight: ["400", "700"],
     variable: "--font-pixelify",
+  });
+  const lato = Lato({
+    subsets: ["latin"],
+    weight: ["400", "700"], 
+    variable: "--font-lato",
   });
 
 
