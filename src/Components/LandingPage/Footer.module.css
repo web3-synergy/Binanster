@@ -84,7 +84,7 @@
 .bnb {
     color: white;
     display: flex;
-    flex-direction: row;       /* default: row for desktop */
+    flex-direction: column;       /* default: row for desktop */
     justify-content: center;
     align-items: center;       /* vertical alignment in row */
     text-align: center;
